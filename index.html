@@ -1,10 +1,322 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Evety</title>
+
+    <link rel="stylesheet" type="text/css" href="css/carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/icon.png" type="image/png">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
-    <center><h1>Welcome to evety!</h1></center>
+  	<div id="wrap">
+  	<header>
+  		<nav id="menu">
+			<a href="#main" class="active_tab animated-scroll">Главная</a>
+			<a href="#services" class="animated-scroll">Услуги</a>
+			<a href="#about" class="animated-scroll">О нас</a>
+			<a href="#works" class="animated-scroll">Наши работы</a>
+			<a href="#contacts" class="animated-scroll">Контакты</a>
+		</nav>
+	</header>
+
+	<section id="main">
+		<!-- <div id="header_info">
+		  	<object type="image/svg+xml" data="img/logo2-2.svg" class="logo2">Your browser does not support SVG</object>
+		  	<div class="header_info_item">8(800)0000000<br>evety.web@yandex.ru</div>
+		</div> -->
+		<div class="divider"></div>
+		<div id="main_content">
+			<div class="overdiv"></div>
+			<div id="description">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				      <!-- Indicators -->
+				      <ol class="carousel-indicators">
+				        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				        <li data-target="#myCarousel" data-slide-to="1"></li>
+				        <li data-target="#myCarousel" data-slide-to="2"></li>
+				      </ol>
+				      <div class="carousel-inner"    data-property="{videoURL:'http://www.youtube.com/watch?v=CGXd33pJR-c&list=PL7E036F27D008B266',containment:'.carousel-inner',autoPlay:true, mute:true, startAt:0, opacity:1}">
+				        <div class="item active">
+				        <div class="container">
+				          <div class="carousel-caption">
+				            <h1>Навстречу успеху</h1>
+				            <p>Успех любой компании начинается с хорошего сайта!</p>
+				            <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="buttonClicked()">Сделать шаг к успеху</a></p>
+				          </div>
+				        </div>
+				      </div>
+				      <div class="item">
+				        <div class="container">
+				          <div class="carousel-caption">
+				            <h1>Все, что нужно, находится здесь</h1>
+				            <p>Хороший сайт начинается с нажатия этой кнопки:</p>
+				            <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="buttonClicked()">Сделать шаг к успеху</a></p>
+				          </div>
+				        </div>
+				      </div>
+				      <div class="item">
+				        <div class="container">
+				          <div class="carousel-caption">
+				            <h1>Мы гарантируем</h1>
+				            <p>индивидуальный подход, качество, надежность<br>в минимальные сроки</p>
+				            <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="buttonClicked()">Сделать шаг к успеху</a></p>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+				    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+				  </div><!-- /.carousel -->
+
+			</div>
+		</div>
+	</section>
+	<div class="divider"></div>
+
+	<section id="services">
+		<div class="header_text">Мы предлагаем</div>
+		<!-- <div id="services_info">
+			<div class="type_icon_panel">
+				<div class="type_icon" id="visa"></div>
+				<div class="icon_divider"></div>
+				<p>Наш сайт-визитка самый прекрасный-распрекрасный</p>
+				<a class="btn btn-info btn-lg" onclick="buttonClicked()">Оставить заявку</a>
+			</div>
+			<div class="type_icon_panel">
+				<div class="type_icon" id="shop"></div>
+				<div class="icon_divider"></div>
+				<p>Интернет-магазин для выгодных продаж!</p>
+				<a class="btn btn-info btn-lg" onclick="buttonClicked()">Оставить заявку</a>
+			</div>
+			<div class="type_icon_panel">
+				<div class="type_icon" id="server"></div>
+				<div class="icon_divider"></div>
+				<p>Веб-приложение любой сложности</p>
+				<a class="btn btn-info btn-lg" onclick="buttonClicked()">Оставить заявку</a>
+			</div>
+		</div> -->
+		<!-- <div>
+			dfffffffffffffffffffffffffffffffffffffffffd
+			dffffffffffffffffffffffffffffffffffffffffffffffffff
+			dffUsing forEach on a general-purpose web page still (as of March 2014) requires that you include a "shim" for it for browsers that don't support it natively, because IE8 and earlier don't have it (and they're used by somewhere between 7% and 21% of the global browser users depending on who you believe; that figure is skewed a bit by markedly higher use in China vs. elsewhere, always check your own stats to see what you need to support). But that's easily done (search for "es5 shim" for several options).
+
+forEach has the benefit that you don't have to declare indexing and entry variables in the containing scope, as they're supplied as arguments to the iteration function, and so nicely scoped to just that iteration.
+
+If you're worried about the runtime cost of making a function call for each array entry, don't be; details.
+
+		</div> -->
+		<div class="container marketing">
+          <div class="row" id="service">
+            <div class="col-md-4">
+              <div class="jumbotron jumbotron-margin prices-font wow fadeInUp" data-wow-duration="1.5s">
+                <img class="img-circle jumbotron-img" src="img/icons/tag.png">
+                <div class="caption">
+                  <div class="price-head text-center">Сайт визитка</div>
+                  <ul class="list-group">
+                    <li class="list-group-item">Шаблонный дизайн</li>
+                    <li class="list-group-item">Наполнение сайта контентом</li>
+                    <li class="list-group-item">Поддержка сайта</li>
+                    <li class="list-group-item">Хостинг и доменное имя</li>
+                    <li class="list-group-item">Статический контент</li>
+                  </ul>
+                </div>
+                <button class="btn-lg btn-info btn-block order" data-href="#contacts" onclick="buttonClicked()">Заказать</button>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="jumbotron jumbotron-margin prices-font wow fadeInUp" data-wow-duration="1.5s">
+                <img class="img-circle jumbotron-img" src="img/icons/page.png">
+                <div class="caption">
+                  <div class="price-head text-center">Сайт визитка</div>
+                  <ul class="list-group">
+                    <li class="list-group-item">Шаблонный дизайн</li>
+                    <li class="list-group-item">Наполнение сайта контентом</li>
+                    <li class="list-group-item">Поддержка сайта</li>
+                    <li class="list-group-item">Хостинг и доменное имя</li>
+                    <li class="list-group-item">Статический контент</li>
+                  </ul>
+                </div>
+                <button class="btn-lg btn-info btn-block order" data-href="#contacts" onclick="buttonClicked()">Заказать</button>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="jumbotron jumbotron-margin prices-font wow fadeInUp" data-wow-duration="1.5s">
+                <img class="img-circle jumbotron-img" src="img/icons/monitor.png">
+                <div class="caption">
+                  <div class="price-head text-center">Сайт визитка</div>
+                  <ul class="list-group">
+                    <li class="list-group-item">Шаблонный дизайн</li>
+                    <li class="list-group-item">Наполнение сайта контентом</li>
+                    <li class="list-group-item">Поддержка сайта</li>
+                    <li class="list-group-item">Хостинг и доменное имя</li>
+                    <li class="list-group-item">Статический контент</li>
+                  </ul>
+                </div>
+                <button class="btn-lg btn-info btn-block order" data-href="#contacts" onclick="buttonClicked()">Заказать</button>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <hr class="featurette-divider">
+
+              <h2 style="text-align: center;" class="wow fadeInDown header_text" data-wow-duration="0.5s">
+                КАК МЫ РАБОТАЕМ</h2>
+            </div>
+          </div> <!-- /#prices -->
+        </div> <!-- /.container .marketing -->
+	</section>
+
+	<div class="divider"></div>
+
+	<section id="about">
+		<div class="header_text">Наша команда:</div>
+		<div class="we">
+			<div id="pavel" class="wepic"><div></div><span>Павел Батищев</span></div>
+			<div id="natela" class="wepic"><div></div><span>Натела Василиади</span></div>
+			<div id="ilya" class="wepic"><div></div><span>Илья Беляков</span></div>
+			<div id="olya" class="wepic"><div></div><span>Мурашова Ольга</span></div>
+		</div>
+		<div class="text">Мы - молодая команда независимых разработчиков, которые объединились для совместной работы над Вашими проектами. Мы создадим для Вас качественный сайт, способный сделать Вашу компанию известной в глобальной сети, привлечь новых клиентов и повысить продажи в несколько раз!</div>
+	</section>
+
+	<div class="divider"></div>
+
+	<section id="works">
+		<div class="header_text">Наши работы</div>
+		<div class="col-xs-1">
+          <a class="prev-work pull-right">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only"></span>
+          </a>
+        </div>
+		<div class="col-xs-10">
+          <div id="our-works" class="owl-carousel">
+            <div class="item">
+              <img src="img/girl-terminator.png">
+            </div>
+            <div class="item">
+              <img src="img/girl-terminator.png">
+            </div>
+            <div class="item">
+              <img src="img/girl-terminator.png">
+            </div>
+            <div class="item">
+              <img src="img/girl-terminator.png">
+            </div>
+            <div class="item">
+              <img src="img/girl-terminator.png">
+            </div>
+            <div class="item">
+              <img src="img/girl-terminator.png">
+            </div>
+            <div class="item">
+              <img src="img/girl-terminator.png">
+            </div>
+            <div class="item">
+              <img src="img/girl-terminator.png">
+            </div>
+            <div class="item">
+              <img src="img/girl-terminator.png">
+            </div>
+            <div class="item">
+              <img src="img/girl-terminator.png">
+            </div>
+            <div class="item">
+              <img src="img/girl-terminator.png">
+            </div>
+            <div class="item">
+              <img src="img/girl-terminator.png">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-1">
+          <a class="next-work pull-left">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only"></span>
+          </a>
+        </div>
+	</section>
+
+	<div class="divider"></div>
+
+	<section id="contacts">
+			<div class="header_text">Заполните форму, и наши специалисты свяжутся с вами в ближайшее время</div>
+		<form role="form">
+		  <div class="form-group">
+		  	 <label for="email">Введите ваше имя:</label><span class="imp">*</span>
+		    <input required type="text" class="form-control" id="text">
+		    <label for="email">Введите ваш e-male:</label><span class="or">**</span>
+		    <input type="email" class="form-control" id="email">
+		     <label for="email">Или номер телефона:</label><span class="or">**</span>
+		    <input type="email" class="form-control" id="email">
+		    <a href="#" class="btn btn-info btn-lg" id="submit_b">Оформить заявку</a>
+		     <p><span class="imp">*</span> - поле обязательно для заполнения</p>
+		    <p><span class="or">**</span> - одно из полей обязательно для заполнения</p>
+		  </div>
+		</form>
+	</section>
+	<!-- <div class="empty"></div> -->
+	<!-- </div> -->
+	<footer class="row">
+		  <div class="container">
+          <div class="row text-center">
+
+            <hr class="featurette-divider">
+            <h5>Join us!</h5>
+
+            <ul class="list-inline">
+              <li>
+                <a href="" class="link-contrast footer-icon-container" target="_blank">
+                  <i class="icon footer-icon icon-facebook"></i>
+                </a>        </li>
+              <li>
+                <a href="" class="link-contrast footer-icon-container" target="_blank">
+                  <i class="icon footer-icon icon-google-plus"></i>
+                </a>        </li>
+              <li>
+                <a href="" class="link-contrast footer-icon-container" target="_blank">
+                  <i class="icon footer-icon icon-vk"></i>
+                </a>        </li>
+
+              <li>
+                <a href="" class="link-contrast footer-icon-container" target="_blank">
+                  <i class="icon footer-icon icon-twitter"></i>
+                </a>        </li>
+
+              <li>
+                <a href="" class="link-contrast footer-icon-container" target="_blank">
+                  <i class="icon footer-icon icon-linkedin"></i>
+                </a>      </li>
+
+              <li>
+                <a href="" class="link-contrast footer-icon-container" target="_blank">
+                  <i class="icon footer-icon icon-youtube"></i>
+                </a>        </li>
+            </ul>
+
+            <p>&copy; evety, Inc. <span id="year">2014</span></p>
+
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+	</footer>
   </body>
 </html>
