@@ -31,6 +31,7 @@ body {
     text-transform: lowercase;
     font-size: 45px;
     color: #2FA5D5;
+    text-shadow: 0px 0px 70px #000;
 }
 .navbar-default .navbar-nav>li>a {
     color: #fff;
@@ -67,6 +68,7 @@ body {
     text-transform: lowercase;
     font-size: 39px;
     color: #2FA5D5;
+    padding-top: 8px;
 }
 .top-band{
     /*background: transparent url('../images/girl-terminator.png') no-repeat right bottom;*/
@@ -102,6 +104,7 @@ body {
 }
 .carousel-caption h2 {
     color: #ccc;
+    margin: 20px 0;
 }
 
 .band {
@@ -135,6 +138,65 @@ body {
     font-size: 24px;
     padding: 10px 0;
 }
+/* work order*/
+#service .wo {
+
+}
+#service .wo-item {
+    margin-bottom: 15px;
+    font-size: 18px;
+    height: 103px;
+}
+#service .wo-item .wo-pic {
+    position: relative;
+    z-index: 0;
+    float: left;
+    margin-right: 15px;
+    width: 128px;
+    height: 128px;
+    background: #fff;
+    border-radius: 50%;
+}
+#service .wo-item .wo-pic.p1{background: url('../images/form.png')}
+#service .wo-item .wo-pic.p2{background: url('../images/Phone-icon.png')}
+#service .wo-item .wo-pic.p3{}
+#service .wo-item .wo-pic.p4{}
+#service .wo-item .wo-pic.p5{background: url('../images/Fine-icon.png')}
+#service .wo-item .ml {
+    margin-right: 0;
+    margin-left: 15px;
+}
+#service .wo-item .wo-pic:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -102px 0 0 -112px;
+    width: 224px;
+    height: 204px;
+    background: url(../images/wo1.png) 50% 50% no-repeat;
+    z-index: -1;
+}
+#service .wo-item .wo-pic.p2:before {background: url(../images/wo2.png) 50% 50% no-repeat; top: 30%;}
+#service .wo-item .wo-pic.p3:before {background: url(../images/wo3.png) 50% 50% no-repeat; top: 30%;}
+#service .wo-item .wo-pic.p4:before {background: url(../images/wo4.png) 50% 50% no-repeat; top: 25%;}
+#service .wo-item .wo-pic.p5:before {background: url(../images/wo5.png) 50% 50% no-repeat; top: 25%;}
+#service .wo-item .wo-text {
+    height: 103px;
+    overflow: hidden;
+    line-height: 103px;
+}
+#service .wo-item .wo-text>span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+#service .wo-item .wo-text .accent {
+    color: #40C0F0;
+    text-transform: uppercase;
+}
+/* /work order*/
 textarea{
     resize: none;
 }
