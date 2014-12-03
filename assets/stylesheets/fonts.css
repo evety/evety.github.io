@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans'), local('PT Sans-Regular') url('/fonts/PT_Sans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sansation';
+  src: local('Sansation'), local('Sansation-Regular'), url('/fonts/Sansation-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sansation';
+  font-weight: bold;
+  src: local('Sansation Bold'), local('Sansation-Bold'), url('/fonts/Sansation-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kaushan Script';
+  src: local('Kaushan Script'), local('Kaushan Script-Regular'), url('/fonts/Kaushan_Script-Regular.otf') format('opentype');
+}
