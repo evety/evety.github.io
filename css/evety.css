@@ -28,8 +28,13 @@ body {
   width: 100%;
   height: 100px;
   z-index: 2;
+  text-align: center;
+}
+.top-menu ul.menu {
+  display: none;
 }
 .top-menu .logo {
+  position: absolute;
   height: 100%;
   float: left;
   font-family: 'Kaushan Script';
@@ -39,35 +44,22 @@ body {
   margin-left: 50px;
   font-weight: bold;
 }
-.top-menu .menu {
-  height: 100%;
-  display: inline;
-  float: right;
-  padding-right: 50px;
-  line-height: 100px;
-  font-size: 20px;
-}
-.top-menu .menu ul {
-  list-style-type: none;
-  display: inline;
-}
-.top-menu .menu ul li {
-  display: inline;
-  padding: 0px 5px;
-}
-.top-menu .menu ul li a {
-  color: white;
-}
-.top-menu .menu ul li a:hover {
-  text-decoration: none;
-}
 .top-menu-fixed {
   position: fixed;
-  background-color: #292929;
+  background-color: #3d3d3f;
   height: 60px;
+  z-index: 50;
+}
+.top-menu-fixed ul.menu {
+  display: inline-block;
+  line-height: 55px;
+}
+.top-menu-fixed ul.menu a {
+  color: white;
 }
 .top-menu-fixed .logo {
-  line-height: 60px;
+  line-height: 50px;
+  color: #9bc9ff;
 }
 .first-slide {
   background: url('/images/keyboard.jpg') top center no-repeat;
@@ -132,30 +124,30 @@ body {
   height: 100px;
   line-height: 50px;
   width: 100%;
-  font-family: 'Sansation';
-  font-size: 20px;
   text-align: center;
   border-bottom: 1px solid #dfdfdf;
 }
-.second-slide ul {
+ul.menu {
+  font-family: 'Sansation';
   list-style-type: none;
   padding: 0px;
   height: 100%;
   display: inline-block;
   margin: 0;
+  font-size: 20px;
 }
-.second-slide ul li {
+ul.menu li {
   display: inline-block;
 }
-.second-slide ul a {
+ul.menu a {
   color: #3d3d3f;
   padding: 0px 20px;
   border-right: 1px solid #dfdfdf;
 }
-.second-slide ul a.last {
+ul.menu a.last {
   border: none;
 }
-.second-slide ul a:hover {
+ul.menu a:hover {
   text-decoration: none;
 }
 .third-slide {
@@ -183,6 +175,11 @@ body {
 .fourth-slide .second,
 .fourth-slide .third {
   float: left;
+}
+.fourth-slide .first:hover,
+.fourth-slide .second:hover,
+.fourth-slide .third:hover {
+  background-color: #e9e9e9;
 }
 .fourth-slide .first,
 .fourth-slide .third {
