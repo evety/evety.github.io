@@ -20,6 +20,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'PT Sans', 'Tahoma';
+  color: #3d3d3f;
 }
 .top-menu {
   position: absolute;
@@ -32,7 +33,7 @@ body {
   height: 100%;
   float: left;
   font-family: 'Kaushan Script';
-  color: #2FA5D5;
+  color: rgba(255, 255, 255, 0.4);
   font-size: 40px;
   line-height: 100px;
   margin-left: 50px;
@@ -104,6 +105,20 @@ body {
   font-size: 25px;
   font-style: italic;
 }
+.first-slide .content .button {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 50px;
+  padding: 0px 25px;
+}
+.first-slide .content .button:hover {
+  border-top: 1px solid #4C6684;
+  border-bottom: 1px solid #4C6684;
+  color: #61a6ff;
+  cursor: pointer;
+}
 .corner {
   position: absolute;
   top: 700px;
@@ -112,8 +127,69 @@ body {
   width: 100%;
   z-index: 20;
 }
-.second-slide.content {
+.second-slide {
   margin-top: 808px;
-  background: url('/images/snapshot1.png') top center no-repeat;
-  height: 837px;
+  height: 100px;
+  line-height: 50px;
+  width: 100%;
+  font-family: 'Sansation';
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 1px solid #dfdfdf;
+}
+.second-slide ul {
+  list-style-type: none;
+  padding: 0px;
+  height: 100%;
+  display: inline-block;
+  margin: 0;
+}
+.second-slide ul li {
+  display: inline-block;
+}
+.second-slide ul a {
+  color: #3d3d3f;
+  padding: 0px 20px;
+  border-right: 1px solid #dfdfdf;
+}
+.second-slide ul a.last {
+  border: none;
+}
+.second-slide ul a:hover {
+  text-decoration: none;
+}
+.third-slide {
+  font-family: 'Sansation', 'Tahoma';
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 120px;
+  border-bottom: 1px solid #dfdfdf;
+}
+.fourth-slide {
+  width: 100%;
+  display: inline-block;
+  border-bottom: 1px solid #dfdfdf;
+}
+.fourth-slide .inner {
+  padding: 30px;
+  text-align: center;
+}
+.fourth-slide .inner .title {
+  margin-top: 20px;
+  font-size: 30px;
+}
+.fourth-slide .first,
+.fourth-slide .second,
+.fourth-slide .third {
+  float: left;
+}
+.fourth-slide .first,
+.fourth-slide .third {
+  width: 33.3%;
+}
+.fourth-slide .second {
+  width: 33.4%;
+  border-right: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf;
 }
