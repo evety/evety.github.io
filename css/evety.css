@@ -184,6 +184,11 @@ ul.menu a:hover {
   height: 472px;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: 0.5s;
+  font-size: 18px;
+  font-family: 'Sansation';
+  word-wrap: break-word;
+  color: white;
+  overflow: hidden;
 }
 .fourth-slide .first,
 .fourth-slide .second,
@@ -209,4 +214,8 @@ ul.menu a:hover {
   background: url('/images/computer.jpg') top center no-repeat;
   margin-top: -60px;
   height: 700px;
+}
+.sixth-slide {
+  background: url('/images/snapshot5.png') top center no-repeat;
+  height: 800px;
 }

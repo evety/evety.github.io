@@ -13,7 +13,7 @@
 $.stellar();
 
 $('.fourth-slide .inner').hover(function(){
-   $('.tooltip').css('-webkit-transform', 'translate(-500px, 0)');
+   $('.tooltip').css('-webkit-transform', 'translate(-600px, 0)');
 }, function() {
    $('.tooltip').css('-webkit-transform', 'translate(0, 0)');
 });
