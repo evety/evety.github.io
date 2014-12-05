@@ -10,3 +10,10 @@
 //      }
 //   });
 //});
+$.stellar();
+
+$('.fourth-slide .inner').hover(function(){
+   $('.tooltip').css('-webkit-transform', 'translate(-500px, 0)');
+}, function() {
+   $('.tooltip').css('-webkit-transform', 'translate(0, 0)');
+});
