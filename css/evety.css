@@ -197,14 +197,18 @@ ul.menu a:hover {
   background-color: white;
   width: 33.3%;
 }
-.fourth-slide .second {
-  width: 33.4%;
+.fourth-slide .first {
   border-right: 1px solid #dfdfdf;
+}
+.fourth-slide .third {
   border-left: 1px solid #dfdfdf;
 }
+.fourth-slide .second {
+  width: 33.4%;
+}
 .fourth-slide .second .second-corner {
-  background: url('/images/aboutmask2.png') bottom center no-repeat;
-  height: 65px;
+  background: url('/images/aboutmask3.png') bottom center no-repeat;
+  height: 85px;
 }
 .fifth-slide .fifth-background {
   background: url('/images/snapshot6.png') top center no-repeat;
