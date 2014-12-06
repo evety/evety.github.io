@@ -168,14 +168,10 @@ ul.menu a:hover {
   text-align: center;
   cursor: pointer;
   /*-webkit-transform: translate(0, 0px);*/
-  -webkit-transition: 0.5s;
 }
 .fourth-slide .inner .title {
   margin-top: 20px;
   font-size: 30px;
-}
-.fourth-slide .inner:hover {
-  -webkit-transform: translate(-10px, 0);
 }
 .fourth-slide .tooltip {
   width: 100%;
@@ -211,9 +207,25 @@ ul.menu a:hover {
   height: 65px;
 }
 .fifth-slide .fifth-background {
-  background: url('/images/snapshot6.png') bottom center no-repeat;
+  background: url('/images/snapshot6.png') top center no-repeat;
   margin-top: -60px;
   height: 700px;
+}
+.fifth-slide .fifth-background .fifth-title {
+  font-family: 'Sansation', 'Tahoma';
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  position: absolute;
+  margin-top: 350px;
+  width: 100%;
+}
+.fifth-slide .fifth-background .fifth-title div {
+  display: inline-block;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 0px 25px;
 }
 .sixth-slide {
   background: url('/images/snapshot5.png') top center no-repeat;

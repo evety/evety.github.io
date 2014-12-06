@@ -14,8 +14,8 @@ $.stellar({
    horizontalOffset: 50
 });
 
-$('.fourth-slide .inner').hover(function(){
-   $('.tooltip').css('-webkit-transform', 'translate(-600px, 0)');
-}, function() {
-   $('.tooltip').css('-webkit-transform', 'translate(0, 0)');
-});
+//$('.fourth-slide .inner').hover(function(){
+//   $('.tooltip').css('-webkit-transform', 'translate(-600px, 0)');
+//}, function() {
+//   $('.tooltip').css('-webkit-transform', 'translate(0, 0)');
+//});
