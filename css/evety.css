@@ -125,7 +125,7 @@ body {
   line-height: 50px;
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid #d3d3d3;
 }
 ul.menu {
   font-family: 'Sansation';
@@ -142,7 +142,7 @@ ul.menu li {
 ul.menu a {
   color: #3d3d3f;
   padding: 0px 20px;
-  border-right: 1px solid #dfdfdf;
+  border-right: 1px dashed #d3d3d3;
 }
 ul.menu a.last {
   border: none;
@@ -156,7 +156,7 @@ ul.menu a:hover {
   font-weight: bold;
   text-align: center;
   line-height: 120px;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid #d3d3d3;
 }
 .fourth-slide {
   width: 100%;
@@ -199,8 +199,8 @@ ul.menu a:hover {
 }
 .fourth-slide .second {
   width: 33.4%;
-  border-right: 1px solid #dfdfdf;
-  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #d3d3d3;
+  border-left: 1px solid #d3d3d3;
 }
 .fourth-slide .second .second-corner {
   background: url('/images/aboutmask2.png') bottom center no-repeat;
@@ -234,4 +234,91 @@ ul.menu a:hover {
 .sixth-slide {
   background: url('/images/snapshot5.png') top center no-repeat;
   height: 800px;
+}
+.pre-seventh-slide {
+  line-height: 121px;
+  font-family: 'Sansation', 'Tahoma';
+  font-size: 42px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  border-bottom: 1px solid #d3d3d3;
+  width: 100%;
+}
+.seventh-slide {
+  background: url('/images/printscreen1.png') top left no-repeat;
+  height: 1151px;
+}
+.seventh-slide .content {
+  padding-left: 400px;
+  width: 100%;
+  height: 100%;
+}
+.seventh-slide .content .step {
+  padding-top: 83px;
+  width: 100%;
+  height: 267px;
+}
+.seventh-slide .content .step .title {
+  font-family: 'Sansation';
+  font-size: 30px;
+}
+.seventh-slide .content .step .subtitle {
+  font-family: 'DejaVu serif';
+  font-style: italic;
+}
+.seventh-slide .content .step .description {
+  font-family: 'DejaVu serif';
+  font-style: italic;
+}
+.post-seventh-slide {
+  background: url("/images/triangle.png") repeat-x left bottom;
+  width: 100%;
+  height: 7px;
+  position: absolute;
+}
+.pre-eight-slide {
+  font-family: 'Sansation', 'Tahoma';
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 120px;
+  border-bottom: 1px solid #d3d3d3;
+  border-top: 1px solid #d3d3d3;
+}
+.eighth-slide {
+  width: 100%;
+}
+.eighth-slide .content {
+  margin-left: 84px;
+  height: 800px;
+}
+.eighth-slide .content .title {
+  line-height: 300px;
+  font-family: 'DejaVu serif';
+  font-size: 25px;
+  margin-left: -1px;
+  font-style: italic;
+  text-align: center;
+  border-left: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+  -webkit-border-bottom-left-radius: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  border-bottom-left-radius: 20px;
+}
+.eighth-slide .content .icons {
+  background: url('/images/screen2.png') top center no-repeat;
+  margin-top: -5px;
+  height: 412px;
+}
+.nineth-slide {
+  background: url('/images/keyboard_dark.jpg') center center no-repeat;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  font-family: 'DejaVu serif';
+  font-style: italic;
+  line-height: 200px;
+  width: 100%;
+  display: inline-block;
 }
