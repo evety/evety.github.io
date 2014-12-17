@@ -320,7 +320,7 @@ ul.menu a:hover {
   color: white;
   font-family: 'DejaVu serif';
   width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 }
 .nineth-slide .title {
   font-family: 'Sansation', 'Tahoma';
@@ -346,6 +346,28 @@ ul.menu a:hover {
 .nineth-slide form textarea {
   width: 100%;
   margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  padding: 0px 15px;
+  border-radius: 5px;
+}
+.nineth-slide form .button {
+  line-height: 50px;
+  background-color: white;
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
+  border: 1px solid white;
+  cursor: pointer;
+  -webkit-transition-duration: 0.6s;
+}
+.nineth-slide form .button:hover {
+  background-color: transparent;
+  color: white;
+}
+.nineth-slide form input {
+  line-height: 50px;
 }
 .nineth-slide form textarea {
   height: 120px;
