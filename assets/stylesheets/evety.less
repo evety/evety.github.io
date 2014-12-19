@@ -218,9 +218,20 @@
       .image {
          width: 200px;
          height: 135px;
-         -webkit-transition-duration: 1s;
-         background: url('/images/landing.png') no-repeat center center;
+         overflow: hidden;
+         //background: url('/images/landing.png') no-repeat center center;
          margin: auto;
+
+         .image-sliding {
+            -webkit-transition-duration: 1s;
+            width: 200%;
+            height: 100%;
+         }
+
+         .image1, .image2 {
+            width: 50%;
+            float: left;
+         }
 
          //&:hover {
             //background: url('/images/landing2.png') no-repeat center center;

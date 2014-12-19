@@ -22,14 +22,14 @@ $.stellar({
 
 jQuery(document).ready(function($) {
    var slide4 = $('.fourth-slide .first');
-   var image = slide4.find('.image');
+   var image = slide4.find('.image-sliding');
    var sliding = slide4.find('.sliding');
 
-   slide4.mouseover(function() {
-      image.css('background', 'url("/images/landing2.png") no-repeat center center');
+   slide4.mouseenter(function() {
+      image.css('margin-left', '-100%');
       sliding.css('margin-left', 'calc(-100% - 30px)');
-   }).mouseout(function() {
-      image.css('background', 'url("/images/landing.png") no-repeat center center');
+   }).mouseleave(function() {
+      image.css('margin', '0');
       sliding.css('margin', '0');
    });
 });
