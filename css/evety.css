@@ -127,7 +127,7 @@ body {
   text-align: center;
   border-bottom: 1px solid #d3d3d3;
 }
-ul.menu {
+.second-slide ul.menu {
   font-family: 'Sansation';
   list-style-type: none;
   padding: 0px;
@@ -135,19 +135,32 @@ ul.menu {
   display: inline-block;
   margin: 0;
   font-size: 20px;
+  width: 100%;
 }
-ul.menu li {
+.second-slide ul.menu li {
   display: inline-block;
+  width: 19%;
 }
-ul.menu a {
+.second-slide ul.menu a {
   color: #3d3d3f;
   padding: 0px 20px;
   border-right: 1px dashed #d3d3d3;
+  width: 100%;
+  display: block;
 }
-ul.menu a.last {
+.second-slide ul.menu a.logo {
+  line-height: 50px;
+  color: #9bc9ff;
+  font-family: 'Kaushan Script';
+  font-size: 40px;
+  line-height: 100px;
+  font-weight: bold;
+  font-style: italic;
+}
+.second-slide ul.menu a.last {
   border: none;
 }
-ul.menu a:hover {
+.second-slide ul.menu a:hover {
   text-decoration: none;
 }
 .third-slide {
@@ -160,14 +173,41 @@ ul.menu a:hover {
 }
 .fourth-slide {
   width: 100%;
+  font-size: 14px;
   display: inline-block;
   /*border-bottom: 1px solid rgb(223, 223, 223);*/
+}
+.fourth-slide p {
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0;
+  font-size: 14px;
+  line-height: 40px;
 }
 .fourth-slide .inner {
   padding: 30px 30px 0 30px;
   text-align: center;
   cursor: pointer;
   /*-webkit-transform: translate(0, 0px);*/
+}
+.fourth-slide .inner .sliding {
+  -webkit-transition-duration: 1s;
+  width: 400%;
+}
+.fourth-slide .inner .sliding .description {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+.fourth-slide .inner .sliding .table {
+  width: 25%;
+  float: left;
+}
+.fourth-slide .inner .image {
+  width: 200px;
+  height: 135px;
+  -webkit-transition-duration: 1s;
+  background: url('/images/landing.png') no-repeat center center;
+  margin: auto;
 }
 .fourth-slide .inner .title {
   margin-top: 20px;
