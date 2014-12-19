@@ -203,20 +203,19 @@ body {
   float: left;
 }
 .fourth-slide .inner .image {
-  width: 200px;
+  width: 400%;
   height: 135px;
-  overflow: hidden;
-  margin: auto;
-}
-.fourth-slide .inner .image .image-sliding {
   -webkit-transition-duration: 1s;
-  width: 200%;
-  height: 100%;
+}
+.fourth-slide .inner .image .image-wrapper {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
 }
 .fourth-slide .inner .image .image1,
 .fourth-slide .inner .image .image2 {
-  width: 50%;
-  float: left;
+  width: 200px;
+  margin: auto;
 }
 .fourth-slide .inner .title {
   margin-top: 20px;
