@@ -22,6 +22,9 @@ body {
   font-family: 'PT Sans', 'Tahoma';
   color: #3d3d3f;
 }
+html, body {
+  height: 100%;
+}
 .top-menu {
   position: absolute;
   top: 0;
@@ -64,28 +67,35 @@ body {
 .first-slide {
   background: url('/images/keyboard.jpg') top center no-repeat;
   background-attachment: fixed;
-  background-position: cover;
-  height: 800px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  min-height: 700px;
   width: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
 }
 .first-slide .shader {
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
+  min-height: 700px;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 .first-slide .content {
   color: white;
   text-align: center;
-  position: absolute;
   width: 100%;
-  top: 300px;
   font-size: 50px;
+  z-index: 3;
+  margin-top: -108px;
 }
 .first-slide .content .title {
   font-family: 'Sansation', 'Tahoma';
@@ -113,14 +123,13 @@ body {
 }
 .corner {
   position: absolute;
-  top: 700px;
   background: url('/images/aboutmask.png') top center no-repeat;
   height: 108px;
   width: 100%;
   z-index: 20;
+  margin-top: -107px;
 }
 .second-slide {
-  margin-top: 808px;
   height: 100px;
   width: 100%;
   text-align: center;
@@ -169,7 +178,10 @@ body {
 .fourth-slide {
   width: 100%;
   font-size: 14px;
-  display: inline-block;
+  display: flex;
+  margin: 0 auto;
+  align-items: stretch;
+  flex-wrap: wrap;
   /*border-bottom: 1px solid rgb(223, 223, 223);*/
 }
 .fourth-slide p {
@@ -232,8 +244,8 @@ body {
 .fourth-slide .first,
 .fourth-slide .second,
 .fourth-slide .third {
-  float: left;
   overflow: hidden;
+  position: relative;
 }
 .fourth-slide .first,
 .fourth-slide .third {
@@ -244,21 +256,40 @@ body {
   width: 33.4%;
   border-right: 1px solid #d3d3d3;
   border-left: 1px solid #d3d3d3;
+  padding-bottom: 65px;
 }
 .fourth-slide .second .second-corner {
   background: url('/images/aboutmask2.png') bottom center no-repeat;
+  width: 100%;
   height: 65px;
+  position: absolute;
+  bottom: 0;
+}
+
+.third .second-corner {
+  display: none;
+}
+.fifth-slide {
+  height: 80%;
 }
 .fifth-slide .fifth-background {
   background: url('/images/snapshot6.png') top center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   margin-top: -60px;
-  height: 700px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .fifth-slide .fifth-background .fifth-title {
   text-align: center;
   color: white;
-  position: absolute;
-  margin-top: 350px;
+  /*position: absolute;
+  margin-top: 350px;*/
   width: 100%;
 }
 .fifth-slide .fifth-background .fifth-title .title {
@@ -380,7 +411,7 @@ body {
 }
 .nineth-slide form {
   width: 50%;
-  margin: auto;
+  margin: 0 auto;
   color: black;
   font-style: italic;
   font-size: 20px;
@@ -414,4 +445,65 @@ body {
 }
 .nineth-slide form textarea {
   height: 120px;
+}
+
+@media(max-width: 700px) {
+.fourth-slide {
+  border-bottom: 0;
+}
+.fourth-slide .first,
+.fourth-slide .second {
+  background-color: white;
+  display: inline-block;
+  width: 50%;
+  border-bottom: 1px solid #d3d3d3;
+}
+.fourth-slide .third {
+  display: inline-block;
+  width: 50%;
+  margin: 0 auto;
+  border-right: 1px solid #d3d3d3;
+  border-left: 1px solid #d3d3d3;
+  border-bottom: 0 !important;
+}
+.third .second-corner {
+  background: url('/images/aboutmask2.png') bottom center no-repeat;
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  bottom: 0;
+}
+
+.second .second-corner {
+  display: none;
+}
+}
+
+@media(max-width: 500px) {
+.fourth-slide .first,
+  .fourth-slide .second,
+  .fourth-slide .third {
+    width: 100%;
+    border-bottom: 1px solid #d3d3d3;
+  }
+.fourth-slide .third {
+    background-color: transparent;
+    padding-bottom: 65px;
+  }
+.fourth-slide .second {
+    background-color: white;
+    padding-bottom: 0;
+  }
+.third .second-corner {
+  display: block;
+  background: url('/images/aboutmask2.png') bottom center no-repeat;
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  bottom: 0;
+}
+
+.second .second-corner {
+  display: none;
+}
 }
