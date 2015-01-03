@@ -1,0 +1,162 @@
+@import "fonts"
+@import "colors"
+
+@import "button"
+
+// Background-images
+$welcome-background-image = url('/images/keyboard_dark.jpg') top center no-repeat
+
+// Sizes
+$welcome-screen-height = 800px
+
+$corner-height = 54px
+$corner-width = 235px
+
+// Colors
+$html-font-color = $gray
+$html-lines-color = $lgray
+
+$offer-background-color = white
+
+$hover-color = $lblue;
+
+// Fonts
+font-title()
+   font-family 'Sansation'
+   font-weight bold
+   font-size 42px
+   line-height 60px
+   text-align center
+
+font-subtitle()
+   font-family 'DejaVu serif'
+   font-style italic
+   font-size 25px
+   line-height 35px
+   text-align center
+
+font-menu()
+   font-family 'Sansation'
+   color $html-font-color
+   font-size 20px
+
+font-main()
+   font-family 'PT Sans', 'Tahoma'
+   font-style normal
+   font-size 20px
+
+html, body
+   color $html-font-color
+
+.welcome-screen
+   position absolute
+   z-index 1
+
+   display flex
+   flex-direction column
+   justify-content center
+   align-items center
+
+   text-align center
+
+   width 100%
+   height $welcome-screen-height
+   min-height $welcome-screen-height
+
+   top 0
+   left 0
+
+   background $welcome-background-image
+   background-attachment fixed
+   -webkit-background-size cover
+   -moz-background-size cover
+   -o-background-size cover
+   background-size cover
+
+   .content
+      width 100%
+
+      color white
+      .title
+         font-title()
+         line-height 60px
+      .subtitle
+         font-subtitle()
+
+   .button
+      button(white, $hover-color)
+      font-main()
+      margin-top 1em
+      cursor pointer
+
+// Что мы предлагаем
+.offer-screen
+   width 100%
+
+   // Добавим 2px для того, чтобы не появлялось странных артефактов, типа черной линии под треугольником
+   margin-top $welcome-screen-height - $corner-height + 2px
+
+   background-color $offer-background-color
+
+   .corner-line-top
+      position absolute
+      z-index 2
+
+      display inline-block
+
+      width 100%
+      height $corner-height
+
+      overflow hidden
+
+      table
+         width 100%
+
+      .corner-bottom
+         display inline-block
+
+         width 0
+         height 0
+
+         border-style solid
+         border-width ($corner-height - 2px) ($corner-width/2) 0 ($corner-width/2)
+         border-color transparent $offer-background-color
+
+         padding-bottom 2px
+
+      .left, .right
+         background-color $offer-background-color
+      .center
+         width $corner-width - 2px
+
+   .menu
+      display inline-block
+
+      width 100%
+      margin-top $corner-height
+
+      text-align center
+
+      ul
+         display inline-block
+
+         padding 50px 0px
+
+         li
+            display inline-block
+            float left
+
+         a
+            font-menu()
+            text-decoration none
+            padding 0px 20px
+            border-right 1px dashed $html-lines-color
+
+            &.last
+               border-right none
+
+   .title
+      border-top 1px solid $html-lines-color
+      border-bottom 1px solid $html-lines-color
+      font-title()
+      line-height 118px
