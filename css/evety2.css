@@ -18,6 +18,23 @@
 html,
 body {
   color: #3d3d3f;
+  font-family: 'PT Sans', 'Tahoma';
+  font-style: normal;
+  font-size: 20px;
+}
+.title {
+  font-family: 'Sansation';
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 60px;
+  text-align: center;
+}
+.subtitle {
+  font-family: 'DejaVu serif';
+  font-style: italic;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
 }
 .welcome-screen {
   position: absolute;
@@ -40,20 +57,6 @@ body {
   top: 300.5px;
   width: 100%;
   color: #fff;
-}
-.welcome-screen .content .title {
-  font-family: 'Sansation';
-  font-weight: bold;
-  font-size: 42px;
-  line-height: 60px;
-  text-align: center;
-}
-.welcome-screen .content .subtitle {
-  font-family: 'DejaVu serif';
-  font-style: italic;
-  font-size: 25px;
-  line-height: 35px;
-  text-align: center;
 }
 .welcome-screen .button {
   border-top: 1px solid #fff;
@@ -133,10 +136,72 @@ body {
 .offer-screen .title {
   border-top: 1px solid #d3d3d3;
   border-bottom: 1px solid #d3d3d3;
-  font-family: 'Sansation';
-  font-weight: bold;
-  font-size: 42px;
-  line-height: 60px;
-  text-align: center;
   line-height: 118px;
+}
+.offer-screen .content {
+  display: table;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+.offer-screen .content .column {
+  display: table-cell;
+  width: 33.3%;
+  text-align: center;
+  overflow: hidden;
+}
+.offer-screen .content .column.center {
+  width: 33.4%;
+  border-left: 1px solid #d3d3d3;
+  border-right: 1px solid #d3d3d3;
+}
+.offer-screen .content .column .slider {
+  width: 200%;
+  display: table;
+  table-layout: fixed;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.offer-screen .content .column .slider:hover {
+  margin-left: -100%;
+}
+.offer1,
+.offer2 {
+  width: 50%;
+  display: table-cell;
+  padding: 30px;
+}
+.offer1 .image,
+.offer2 .image {
+  text-align: center;
+}
+.offer1 .header,
+.offer2 .header {
+  font-family: 'PT Sans', 'Tahoma';
+  font-style: normal;
+  font-size: 20px;
+  font-size: 30px;
+  line-height: 70px;
+}
+.offer1 .description,
+.offer2 .description {
+  text-align: justify;
+  font-family: 'PT Sans', 'Tahoma';
+  font-style: normal;
+  font-size: 20px;
+  font-size: 16px;
+  line-height: 22px;
+}
+.offer1 .description table,
+.offer2 .description table {
+  width: 100%;
+}
+.offer1 .description table td,
+.offer2 .description table td {
+  text-align: center;
+  border-bottom: 1px solid #d3d3d3;
+  line-height: 40px;
 }
