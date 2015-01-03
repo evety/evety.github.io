@@ -22,10 +22,6 @@ body {
 .welcome-screen {
   position: absolute;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   width: 100%;
   height: 800px;
@@ -40,6 +36,8 @@ body {
   background-size: cover;
 }
 .welcome-screen .content {
+  position: absolute;
+  top: 300.5px;
   width: 100%;
   color: #fff;
 }
@@ -49,7 +47,6 @@ body {
   font-size: 42px;
   line-height: 60px;
   text-align: center;
-  line-height: 60px;
 }
 .welcome-screen .content .subtitle {
   font-family: 'DejaVu serif';
