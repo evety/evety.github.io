@@ -162,6 +162,7 @@ html, body
 
    .content
       display table
+      table-layout fixed
       width 100%
       margin 0
       cursor pointer
@@ -172,7 +173,6 @@ html, body
          text-align center
          overflow hidden
 
-
          &.center
             width 33.4%
             border-left 1px solid $html-lines-color
@@ -181,7 +181,6 @@ html, body
          .slider
             width 200%
             display table
-            table-layout fixed
             -webkit-transition-duration 1s
             -moz-transition-duration 1s
             -ms-transition-duration 1s
@@ -220,3 +219,16 @@ html, body
                         text-align center
                         border-bottom 1px solid $html-lines-color
                         line-height 40px
+
+         .corner-up
+            display inline-block
+
+            width 0
+            height 0
+
+            border-style solid
+            border-width 0 ($corner-width/2) ($corner-height - 2px) ($corner-width/2)
+            border-color transparent $offer-background-color
+
+            padding-bottom 2px
+
