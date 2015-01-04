@@ -321,24 +321,38 @@ corner()
 
                   position absolute
                   display inline-block
+                  top $process-popup-corner-top
 
                   width 0
                   height 0
 
                   border-style solid
-                  border-width $popup-corner-height 0 $popup-corner-height $popup-corner-width
                   border-color transparent white
 
-                  right (- $popup-corner-width)
-                  top $process-popup-corner-top
+               &.left
+                  &:after
+                     border-width $popup-corner-height 0 $popup-corner-height ($popup-corner-width + 1px)
+                     right (- $popup-corner-width)
+
+               &.right
+                  &:after
+                     border-width $popup-corner-height ($popup-corner-width + 1px) $popup-corner-height 0
+                     left (- $popup-corner-width)
 
          .name
             width 50%
             vertical-align top
             line-height $process-image-size
-            padding 0 0 0 25px
             font-main()
             font-family 'Sansation'
+
+            &.left
+               text-align right
+               padding-right 25px
+
+            &.right
+               text-align left
+               padding-left 25px
 
 
 
