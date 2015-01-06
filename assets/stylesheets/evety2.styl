@@ -1,133 +1,142 @@
 @import "fonts"
 @import "colors"
-
 @import "button"
 
-// Background-images
-$welcome-screen-background = url('/images/keyboard_dark.jpg') top center no-repeat
+// ============================= //
+//       Background-images       //
+// ============================= //
+$welcome-screen-background      = url('/images/keyboard_dark.jpg') top center no-repeat
+$form-screen-background         = url('/images/keyboard2.jpg') no-repeat
 
-// Sizes
-$welcome-screen-height = 800px
+// ============================= //
+//             Sizes             //
+// ============================= //
+$welcome-screen-height          = 800px
 
-$corner-height = 54px
-$corner-width = 235px
+$offer-screen-corner-height     = 54px
+$offer-screen-corner-width      = 235px
 
-$process-image-size = 100px
-$process-popup-height = 150px
-$process-popup-corner-top = 25px
+$process-image-size             = 100px
+$process-popup-height           = 150px
+$process-popup-corner-top       = 25px
 
-$communication-circle-size = 150px
-$communication-image-size = 50px
+$communication-circle-size      = 150px
+$communication-image-size       = 50px
 
-$popup-corner-width = 11px
-$popup-corner-height = 11px
+$popup-corner-width             = 11px
+$popup-corner-height            = 11px
 
-// Colors
-$html-font-color = $gray
-$html-lines-color = $lgray
+// ============================== //
+//             Colors             //
+// ============================== //
+$html-font-color                = $gray
+$html-lines-color               = $lgray
 
-$offer-background-color = white
-$process-background-color = #f1f1f1
+$welcome-screen-text-color      = white
+
+$offer-background-color         = white
+
+$process-background-color       = #f1f1f1
 
 $communication-background-color = white
-$communication-circle-color = $html-lines-color
+$communication-circle-color     = $html-lines-color
+$communication-key-text-color   = #E27846
 
-$communication-key-text-color = #E27846
+$button-hover-color                    = $lblue
 
-$hover-color = $lblue
-
-// Fonts
-font-title()
-   font-family 'Sansation'
-   font-weight bold
-   font-size 42px
-   line-height 60px
-   text-align center
-
-font-subtitle()
-   font-family 'DejaVu serif'
-   font-style italic
-   font-size 25px
-   line-height 35px
-   text-align center
-
-font-menu()
+// ============================= //
+//             Fonts             //
+// ============================= //
+offer-screen-menu-font()
    font-family 'Sansation'
    color $html-font-color
    font-size 20px
 
-font-main()
-   font-family 'PT Sans', 'Tahoma'
-   font-style normal
-   font-size 20px
+// ============================== //
+//            Elements            //
+// ============================== //
 
-font-main-italic()
-   font-family 'DejaVu serif'
-   font-style italic
-   font-size 20px
-
-html, body
-   color $html-font-color
-   font-main()
-
-.title
-   font-title()
-.subtitle
-   font-subtitle()
-
-corner()
+offer-screen-corner()
    display inline-block
 
    width 0
    height 0
 
    border-style solid
-   border-width ($corner-height - 2px) ($corner-width/2) ($corner-height - 2px) ($corner-width/2)
+   border-width ($offer-screen-corner-height - 2px) ($offer-screen-corner-width/2) ($offer-screen-corner-height - 2px) ($offer-screen-corner-width/2)
    border-color transparent $offer-background-color
 
    padding-bottom 2px
 
+// ============================== //
+//         Default styles         //
+// ============================== //
+
+html, body
+   color $html-font-color
+
+.title
+   font-family 'Sansation'
+   font-weight bold
+   font-size 42px
+   line-height 120px
+   text-align center
+
+.subtitle
+   font-family 'DejaVu serif'
+   font-style italic
+   font-size 25px
+   line-height 35px
+   text-align center
+
+// ============================== //
+//         Welcome screen         //
+// ============================== //
+
 .welcome-screen
    position absolute
+   display table
+
    z-index 1
 
-   text-align center
+   top 0
+   left 0
 
    width 100%
    height $welcome-screen-height
    min-height $welcome-screen-height
 
-   top 0
-   left 0
+   text-align center
 
    background $welcome-screen-background
-   background-attachment fixed
+
    -webkit-background-size cover
    -moz-background-size cover
    -o-background-size cover
    background-size cover
 
    .content
-      position absolute
-
-      top ((($welcome-screen-height - $corner-height) - 145px) / 2)
+      display table-cell
+      vertical-align middle
 
       width 100%
 
-      color white
+      color $welcome-screen-text-color
 
    .button
-      button(white, $hover-color)
-      font-main()
+      button($welcome-screen-text-color, $button-hover-color)
       margin-top 1em
       cursor pointer
 
-// Что мы предлагаем
+// ============================== //
+//          Offer screen          //
+// ============================== //
+
 .offer-screen
    width 100%
 
    // Добавим 2px для того, чтобы не появлялось странных артефактов, типа черной линии под треугольником
-   margin-top $welcome-screen-height - $corner-height + 2px
+   margin-top $welcome-screen-height - $offer-screen-corner-height + 2px
 
    background-color $offer-background-color
 
@@ -138,7 +147,7 @@ corner()
       display inline-block
 
       width 100%
-      height $corner-height
+      height $offer-screen-corner-height
 
       overflow hidden
 
@@ -146,19 +155,19 @@ corner()
          width 100%
 
       .corner-bottom
-         corner()
+         offer-screen-corner()
          border-bottom none
 
       .left, .right
          background-color $offer-background-color
       .center
-         width $corner-width - 2px
+         width $offer-screen-corner-width - 2px
 
    .menu
       display inline-block
 
       width 100%
-      margin-top $corner-height
+      margin-top $offer-screen-corner-height
 
       text-align center
 
@@ -172,7 +181,7 @@ corner()
             float left
 
          a
-            font-menu()
+            offer-screen-menu-font()
             text-decoration none
             padding 0px 20px
             border-right 1px dashed $html-lines-color
@@ -247,7 +256,7 @@ corner()
                         line-height 40px
 
          .corner-up
-            corner()
+            offer-screen-corner()
             border-up none
 
 .works-screen
@@ -415,7 +424,7 @@ corner()
             color $communication-key-text-color
 
 .form-screen
-   background url('/images/keyboard2.jpg') no-repeat
+   background $form-screen-background
 
    background-attachment fixed
    -webkit-background-size cover
