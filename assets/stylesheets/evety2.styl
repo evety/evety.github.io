@@ -95,7 +95,6 @@ html, body
 
 .welcome-screen
    position absolute
-   display table
 
    z-index 1
 
@@ -114,6 +113,14 @@ html, body
    -moz-background-size cover
    -o-background-size cover
    background-size cover
+
+   .title
+      line-height 60px
+
+   .visible-area
+      height $welcome-screen-height - $offer-screen-corner-height
+      width 100%
+      display table
 
    .content
       display table-cell

@@ -35,7 +35,6 @@ body {
 }
 .welcome-screen {
   position: absolute;
-  display: table;
   z-index: 1;
   top: 0;
   left: 0;
@@ -48,6 +47,14 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+.welcome-screen .title {
+  line-height: 60px;
+}
+.welcome-screen .visible-area {
+  height: 746px;
+  width: 100%;
+  display: table;
 }
 .welcome-screen .content {
   display: table-cell;
