@@ -16,6 +16,9 @@ $process-image-size = 100px
 $process-popup-height = 150px
 $process-popup-corner-top = 25px
 
+$communication-circle-size = 150px
+$communication-image-size = 50px
+
 $popup-corner-width = 11px
 $popup-corner-height = 11px
 
@@ -27,6 +30,7 @@ $offer-background-color = white
 $process-background-color = #f1f1f1
 
 $communication-background-color = white
+$communication-circle-color = $html-lines-color
 
 $hover-color = $lblue
 
@@ -361,3 +365,43 @@ corner()
 
 .communication-screen
    background-color $communication-background-color
+
+   box-shadow 0 0 10px rgba(0,0,0,0.5)
+
+   .content
+      display table
+      width 100%
+      table-layout fixed
+
+      .record
+         display table-cell
+         text-align center
+
+         .thumbnail
+            width $communication-circle-size
+            height $communication-circle-size
+            display inline-block
+
+
+            .circle
+               width $communication-circle-size
+               height $communication-circle-size
+               display table-cell
+
+               border-radius 50%
+               -webkit-border-radius 50%
+               -moz-border-radius 50%
+
+               vertical-align middle
+               text-align center
+
+               background-color $communication-circle-color
+
+               .image
+                  width $communication-image-size
+                  height $communication-image-size
+
+                  display inline-block
+
+                  background-repeat no-repeat
+                  background-size cover
