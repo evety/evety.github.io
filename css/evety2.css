@@ -324,10 +324,12 @@ body {
   display: table;
   width: 100%;
   table-layout: fixed;
+  padding: 60px 0 80px 0;
 }
 .communication-screen .content .record {
   display: table-cell;
   text-align: center;
+  overflow: hidden;
 }
 .communication-screen .content .record .thumbnail {
   width: 150px;
@@ -350,5 +352,73 @@ body {
   height: 50px;
   display: inline-block;
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.communication-screen .content .record .key {
+  color: #e27846;
+}
+.form-screen {
+  background: url("/images/keyboard2.jpg") no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  font-family: 'DejaVu serif';
+  width: 100%;
+  padding-bottom: 20px;
+}
+.form-screen .title {
+  font-family: 'Sansation', 'Tahoma';
+  font-size: 42px;
+  line-height: 120px;
+  font-weight: bold;
+  text-align: center;
+}
+.form-screen .subtitle {
+  font-family: 'DejaVu serif';
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+}
+.form-screen form {
+  width: 50%;
+  margin: auto;
+  color: #000;
+  font-style: italic;
+  font-size: 20px;
+}
+.form-screen form input,
+.form-screen form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: rgba(255,255,255,0.3);
+  border: none;
+  color: #fff;
+  padding: 0px 15px;
+  border-radius: 5px;
+}
+.form-screen form .button {
+  line-height: 50px;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
+  border: 1px solid #fff;
+  cursor: pointer;
+  -webkit-transition-duration: 0.6s;
+}
+.form-screen form .buttonhover {
+  background-color: transparent;
+  color: #fff;
+}
+.form-screen form input {
+  line-height: 50px;
+}
+.form-screen form textarea {
+  height: 120px;
 }

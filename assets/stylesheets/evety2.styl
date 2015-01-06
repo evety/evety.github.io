@@ -4,7 +4,7 @@
 @import "button"
 
 // Background-images
-$welcome-background-image = url('/images/keyboard_dark.jpg') top center no-repeat
+$welcome-screen-background = url('/images/keyboard_dark.jpg') top center no-repeat
 
 // Sizes
 $welcome-screen-height = 800px
@@ -31,6 +31,8 @@ $process-background-color = #f1f1f1
 
 $communication-background-color = white
 $communication-circle-color = $html-lines-color
+
+$communication-key-text-color = #E27846
 
 $hover-color = $lblue
 
@@ -98,7 +100,7 @@ corner()
    top 0
    left 0
 
-   background $welcome-background-image
+   background $welcome-screen-background
    background-attachment fixed
    -webkit-background-size cover
    -moz-background-size cover
@@ -373,9 +375,12 @@ corner()
       width 100%
       table-layout fixed
 
+      padding 60px 0 80px 0
+
       .record
          display table-cell
          text-align center
+         overflow hidden
 
          .thumbnail
             width $communication-circle-size
@@ -404,4 +409,85 @@ corner()
                   display inline-block
 
                   background-repeat no-repeat
-                  background-size cover
+                  background-size contain
+                  background-position center
+         .key
+            color $communication-key-text-color
+
+.form-screen
+   background url('/images/keyboard2.jpg') no-repeat
+
+   background-attachment fixed
+   -webkit-background-size cover
+   -moz-background-size cover
+   -o-background-size cover
+   background-size cover
+
+   text-align center
+   font-size 25px
+   color white
+   font-family 'DejaVu serif'
+   width 100%
+   padding-bottom 20px
+
+   .title 
+      font-family 'Sansation', 'Tahoma'
+      font-size 42px
+      line-height 120px
+      font-weight bold
+      text-align center
+   
+
+   .subtitle 
+      font-family 'DejaVu serif'
+      font-size 25px
+      font-style italic
+      text-align center
+   
+
+   form 
+      width 50%
+      margin auto
+      color black
+      font-style italic
+      font-size 20px
+
+      input, textarea 
+         width 100%
+         margin-bottom 20px
+         background-color rgba(255, 255, 255, 0.3)
+         border none
+         color white
+         padding 0px 15px
+         border-radius 5px
+         //border-top 1px solid white
+         //border-bottom 1px solid white
+      
+
+      .button 
+         line-height 50px
+         background-color white
+         border-radius 5px
+         //border-top 1px solid white
+         //border-bottom 1px solid white
+         //color white
+         width 50%
+         margin auto
+         border 1px solid white
+         cursor pointer
+         -webkit-transition-duration 0.6s
+      
+
+      .buttonhover 
+         background-color transparent
+         color white
+      
+
+      input 
+         line-height 50px
+      
+
+      textarea 
+         height 120px
+      
+   
