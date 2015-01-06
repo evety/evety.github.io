@@ -26,6 +26,8 @@ $html-lines-color = $lgray
 $offer-background-color = white
 $process-background-color = #f1f1f1
 
+$communication-background-color = white
+
 $hover-color = $lblue
 
 // Fonts
@@ -284,14 +286,17 @@ corner()
             .frame
                position absolute
 
-               img
-                  display inline-block
-                  width $process-image-size
+               display inline-block
 
                width $process-image-size
                height $process-image-size
-               border-radius 1000px
-               overflow hidden
+
+               border-radius 50%
+               -webkit-border-radius 50%
+               -moz-border-radius 50%
+
+               background-repeat no-repeat
+               background-size cover
 
          .description
             width 50%
@@ -354,5 +359,5 @@ corner()
                text-align left
                padding-left 25px
 
-
-
+.communication-screen
+   background-color $communication-background-color
