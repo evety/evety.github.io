@@ -3,52 +3,55 @@
 @import "button"
 
 // ============================= //
-//       Background-images       //
+//       Background images       //
 // ============================= //
-$welcome-screen-background            = url('/images/keyboard_dark.jpg') top center no-repeat
-$form-screen-background               = url('/images/keyboard2.jpg') no-repeat
+$welcome-screen-background             = url('/images/keyboard_dark.jpg') top center no-repeat
+$form-screen-background                = url('/images/keyboard2.jpg') no-repeat
 
 // ============================= //
 //             Sizes             //
 // ============================= //
-$welcome-screen-height                = 800px
+$welcome-screen-height                 = 800px
 
-$offer-screen-corner-height           = 54px
-$offer-screen-corner-width            = 235px
+$offer-screen-corner-height            = 54px
+$offer-screen-corner-width             = 235px
 
-$process-screen-image-size            = 100px
-$process-screen-popup-height          = 150px
-$process-screen-popup-corner-top      = 25px
-$process-screen-popup-padding         = 0px 10px
-$process-screen-vline-padding         = 30px
-$process-screen-first-record-padding  = 30px
-$process-screen-record-padding-top    = 0px
-$process-screen-record-padding-bottom = 20px
-$process-screen-vline-width           = 1px
+$process-screen-image-size             = 100px
+$process-screen-popup-height           = 150px
+$process-screen-popup-corner-top       = 25px
+$process-screen-popup-padding          = 0px 10px
+$process-screen-vline-padding          = 30px
+$process-screen-first-record-padding   = 30px
+$process-screen-record-padding-top     = 0px
+$process-screen-record-padding-bottom  = 20px
+$process-screen-vline-width            = 1px
 
-$communication-circle-size            = 150px
-$communication-image-size             = 50px
+$communication-screen-content-padding  = 60px 0 80px 0
+$communication-screen-circle-size      = 150px
+$communication-screen-image-size       = 50px
+$communication-screen-key-padding      = 10px
+$communication-screen-value-padding    = 10px
 
-$popup-corner-width                   = 11px
-$popup-corner-height                  = 11px
+$popup-corner-width                    = 11px
+$popup-corner-height                   = 11px
 
 // ============================== //
 //             Colors             //
 // ============================== //
-$html-font-color                      = $gray
-$html-lines-color                     = $lgray
+$html-font-color                       = $gray
+$html-lines-color                      = $lgray
 
-$welcome-screen-text-color            = white
+$welcome-screen-text-color             = white
 
-$offer-background-color               = white
+$offer-screen-background-color         = white
 
-$process-background-color             = #f1f1f1
+$process-screen-background-color       = #f1f1f1
 
-$communication-background-color       = white
-$communication-circle-color           = $html-lines-color
-$communication-key-text-color         = #E27846
+$communication-screen-background-color = white
+$communication-screen-circle-color     = $html-lines-color
+$communication-screen-key-text-color   = #E27846
 
-$button-hover-color                   = $lblue
+$button-hover-color                    = $lblue
 
 // ============================= //
 //             Fonts             //
@@ -70,7 +73,7 @@ offer-screen-corner()
 
    border-style solid
    border-width ($offer-screen-corner-height - 2px) ($offer-screen-corner-width/2) ($offer-screen-corner-height - 2px) ($offer-screen-corner-width/2)
-   border-color transparent $offer-background-color
+   border-color transparent $offer-screen-background-color
 
    padding-bottom 2px
 
@@ -151,7 +154,7 @@ html, body
    // Добавим 2px для того, чтобы не появлялось черной линии под треугольником
    margin-top $welcome-screen-height - $offer-screen-corner-height + 2px
 
-   background-color $offer-background-color
+   background-color $offer-screen-background-color
 
    .corner-line-top
       position absolute
@@ -172,7 +175,7 @@ html, body
          border-bottom none
 
       .left, .right
-         background-color $offer-background-color
+         background-color $offer-screen-background-color
       .center
          width $offer-screen-corner-width - 2px
 
@@ -276,7 +279,7 @@ html, body
    height 800px
 
 .process-screen
-   background-color $process-background-color
+   background-color $process-screen-background-color
 
    .content
       position relative
@@ -385,7 +388,7 @@ html, body
                padding-left 25px
 
 .communication-screen
-   background-color $communication-background-color
+   background-color $communication-screen-background-color
 
    box-shadow 0 0 10px rgba(0,0,0,0.5)
 
@@ -394,7 +397,7 @@ html, body
       width 100%
       table-layout fixed
 
-      padding 60px 0 80px 0
+      padding $communication-screen-content-padding
 
       .record
          display table-cell
@@ -402,14 +405,14 @@ html, body
          overflow hidden
 
          .thumbnail
-            width $communication-circle-size
-            height $communication-circle-size
+            width $communication-screen-circle-size
+            height $communication-screen-circle-size
             display inline-block
 
 
             .circle
-               width $communication-circle-size
-               height $communication-circle-size
+               width $communication-screen-circle-size
+               height $communication-screen-circle-size
                display table-cell
 
                border-radius 50%
@@ -419,11 +422,11 @@ html, body
                vertical-align middle
                text-align center
 
-               background-color $communication-circle-color
+               background-color $communication-screen-circle-color
 
                .image
-                  width $communication-image-size
-                  height $communication-image-size
+                  width $communication-screen-image-size
+                  height $communication-screen-image-size
 
                   display inline-block
 
@@ -431,7 +434,10 @@ html, body
                   background-size contain
                   background-position center
          .key
-            color $communication-key-text-color
+            color $communication-screen-key-text-color
+            padding $communication-screen-key-padding
+         .value
+            padding $communication-screen-value-padding
 
 .form-screen
    background $form-screen-background

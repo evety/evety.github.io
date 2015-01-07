@@ -350,6 +350,10 @@ body {
 }
 .communication-screen .content .record .key {
   color: #e27846;
+  padding: 10px;
+}
+.communication-screen .content .record .value {
+  padding: 10px;
 }
 .form-screen {
   background: url("/images/keyboard2.jpg") no-repeat;
