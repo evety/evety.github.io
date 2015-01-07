@@ -5,44 +5,50 @@
 // ============================= //
 //       Background-images       //
 // ============================= //
-$welcome-screen-background      = url('/images/keyboard_dark.jpg') top center no-repeat
-$form-screen-background         = url('/images/keyboard2.jpg') no-repeat
+$welcome-screen-background            = url('/images/keyboard_dark.jpg') top center no-repeat
+$form-screen-background               = url('/images/keyboard2.jpg') no-repeat
 
 // ============================= //
 //             Sizes             //
 // ============================= //
-$welcome-screen-height          = 800px
+$welcome-screen-height                = 800px
 
-$offer-screen-corner-height     = 54px
-$offer-screen-corner-width      = 235px
+$offer-screen-corner-height           = 54px
+$offer-screen-corner-width            = 235px
 
-$process-image-size             = 100px
-$process-popup-height           = 150px
-$process-popup-corner-top       = 25px
+$process-screen-image-size            = 100px
+$process-screen-popup-height          = 150px
+$process-screen-popup-corner-top      = 25px
+$process-screen-popup-padding         = 0px 10px
+$process-screen-vline-padding         = 30px
+$process-screen-first-record-padding  = 30px
+$process-screen-record-padding-top    = 0px
+$process-screen-record-padding-bottom = 20px
+$process-screen-vline-width           = 1px
 
-$communication-circle-size      = 150px
-$communication-image-size       = 50px
+$communication-circle-size            = 150px
+$communication-image-size             = 50px
 
-$popup-corner-width             = 11px
-$popup-corner-height            = 11px
+$popup-corner-width                   = 11px
+$popup-corner-height                  = 11px
 
 // ============================== //
 //             Colors             //
 // ============================== //
-$html-font-color                = $gray
-$html-lines-color               = $lgray
+$html-font-color                      = $gray
+$html-lines-color                     = $lgray
 
-$welcome-screen-text-color      = white
+$welcome-screen-text-color            = white
 
-$offer-background-color         = white
+$offer-background-color               = white
 
-$process-background-color       = #f1f1f1
+$process-background-color             = #f1f1f1
 
-$communication-background-color = white
-$communication-circle-color     = $html-lines-color
-$communication-key-text-color   = #E27846
+$communication-background-color       = white
+$communication-circle-color           = $html-lines-color
+$communication-key-text-color         = #E27846
 
-$button-hover-color                    = $lblue
+$button-hover-color                   = $lblue
 
 // ============================= //
 //             Fonts             //
@@ -142,7 +148,7 @@ html, body
 .offer-screen
    width 100%
 
-   // Добавим 2px для того, чтобы не появлялось странных артефактов, типа черной линии под треугольником
+   // Добавим 2px для того, чтобы не появлялось черной линии под треугольником
    margin-top $welcome-screen-height - $offer-screen-corner-height + 2px
 
    background-color $offer-background-color
@@ -274,44 +280,40 @@ html, body
 
    .content
       position relative
-      margin-top 20px
+      margin-top $process-screen-vline-padding
 
       .vline
          position absolute
-         width 1px
-         //margin 0 auto
+         width $process-screen-vline-width
          left 50%
          height 100%
          background-color $html-lines-color
 
-      .records
-         //position absolute
-         //width 100%
-         //z-index 2
-         ////background-color transparent
-         //background-color $process-background-color
-
       .record
-         padding-top 50px
          display table
          table-layout fixed
-         padding-bottom 20px
+
+         padding-top $process-screen-record-padding-top
+         padding-bottom $process-screen-record-padding-bottom
 
          width 100%
+
+         &.first
+            padding-top $process-screen-first-record-padding
 
          .image, .description, .name
             display table-cell
 
          .image
-            width $process-image-size
+            width $process-screen-image-size
 
             .frame
                position absolute
 
                display inline-block
 
-               width $process-image-size
-               height $process-image-size
+               width $process-screen-image-size
+               height $process-screen-image-size
 
                border-radius 50%
                -webkit-border-radius 50%
@@ -325,8 +327,9 @@ html, body
 
             .popup
                background-color white
-               height $process-popup-height
-               margin (($process-image-size / 2) - $process-popup-corner-top - $popup-corner-height) 30px 0px 50px
+               height $process-screen-popup-height
+               margin (($process-screen-image-size / 2) - $process-screen-popup-corner-top - $popup-corner-height) 30px 0px 50px
+               padding $process-screen-popup-padding
                border-bottom 1px solid $html-lines-color
 
                position relative
@@ -348,7 +351,7 @@ html, body
 
                   position absolute
                   display inline-block
-                  top $process-popup-corner-top
+                  top $process-screen-popup-corner-top
 
                   width 0
                   height 0
@@ -369,7 +372,7 @@ html, body
          .name
             width 50%
             vertical-align top
-            line-height $process-image-size
+            line-height $process-screen-image-size
             font-main()
             font-family 'Sansation'
 
