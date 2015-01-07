@@ -213,7 +213,30 @@ body {
   border-up: none;
 }
 .works-screen {
-  height: 800px;
+  height: 500px;
+  background: url("/images/screen26.png") center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.works-screen .our-works {
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  display: table;
+}
+.works-screen .our-works .center-cell {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.works-screen .our-works .center-cell .content {
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0,0,0,0.6);
 }
 .process-screen {
   background-color: #f1f1f1;

@@ -6,6 +6,7 @@
 //       Background images       //
 // ============================= //
 $welcome-screen-background             = url('/images/keyboard_dark.jpg') top center no-repeat
+$works-screen-background               = url('/images/screen26.png') center;
 $form-screen-background                = url('/images/keyboard2.jpg') no-repeat
 
 // ============================= //
@@ -25,6 +26,10 @@ $process-screen-first-record-padding   = 30px
 $process-screen-record-padding-top     = 0px
 $process-screen-record-padding-bottom  = 20px
 $process-screen-vline-width            = 1px
+
+$works-screen-height                   = 500px
+$works-screen-content-height           = 50%
+$works-screen-content-width            = 50%
 
 $communication-screen-content-padding  = 60px 0 80px 0
 $communication-screen-circle-size      = 150px
@@ -51,6 +56,8 @@ $welcome-screen-text-color             = white
 $offer-screen-background-color         = white
 
 $process-screen-background-color       = #f1f1f1
+
+$works-screen-content-background-color = rgba(0, 0, 0, 0.6)
 
 $communication-screen-background-color = white
 $communication-screen-circle-color     = $html-lines-color
@@ -285,7 +292,34 @@ html, body
             border-up none
 
 .works-screen
-   height 800px
+   height $works-screen-height
+
+   background $works-screen-background
+
+   -webkit-background-size cover
+   -moz-background-size cover
+   -o-background-size cover
+   background-size cover
+
+   .our-works
+      position absolute
+      height $works-screen-height
+      width 100%
+
+      display table
+
+      .center-cell
+         width 100%
+         display table-cell
+         vertical-align middle
+         text-align center
+
+         .content
+            display inline-block
+
+            width $works-screen-content-width
+            height $works-screen-content-height
+            background-color $works-screen-content-background-color
 
 .process-screen
    background-color $process-screen-background-color
