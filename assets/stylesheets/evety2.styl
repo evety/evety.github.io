@@ -32,6 +32,11 @@ $communication-screen-image-size       = 50px
 $communication-screen-key-padding      = 10px
 $communication-screen-value-padding    = 10px
 
+$form-screen-input-margin              = 0 0 20px 0
+$form-screen-input-padding             = 15px
+$form-screen-textarea-padding          = 15px
+$form-screen-form-padding              = 0 0 20px 0
+
 $popup-corner-width                    = 11px
 $popup-corner-height                   = 11px
 
@@ -50,6 +55,10 @@ $process-screen-background-color       = #f1f1f1
 $communication-screen-background-color = white
 $communication-screen-circle-color     = $html-lines-color
 $communication-screen-key-text-color   = #E27846
+
+$form-screen-text-color                = white
+$form-screen-input-text-color          = white
+$form-screen-input-background-color    = rgba(255, 255, 255, 0.3)
 
 $button-hover-color                    = $lblue
 
@@ -442,77 +451,48 @@ html, body
 .form-screen
    background $form-screen-background
 
-   background-attachment fixed
    -webkit-background-size cover
    -moz-background-size cover
    -o-background-size cover
    background-size cover
 
    text-align center
-   font-size 25px
-   color white
-   font-family 'DejaVu serif'
+   color $form-screen-text-color
    width 100%
-   padding-bottom 20px
-
-   .title 
-      font-family 'Sansation', 'Tahoma'
-      font-size 42px
-      line-height 120px
-      font-weight bold
-      text-align center
-   
-
-   .subtitle 
-      font-family 'DejaVu serif'
-      font-size 25px
-      font-style italic
-      text-align center
-   
 
    form 
       width 50%
       margin auto
-      color black
-      font-style italic
-      font-size 20px
+      padding $form-screen-form-padding
 
       input, textarea 
          width 100%
-         margin-bottom 20px
-         background-color rgba(255, 255, 255, 0.3)
+
+         margin $form-screen-input-margin
+
+         color $form-screen-input-text-color
+         background-color $form-screen-input-background-color
          border none
-         color white
-         padding 0px 15px
-         border-radius 5px
-         //border-top 1px solid white
-         //border-bottom 1px solid white
-      
 
-      .button 
-         line-height 50px
-         background-color white
-         border-radius 5px
-         //border-top 1px solid white
-         //border-bottom 1px solid white
-         //color white
-         width 50%
-         margin auto
-         border 1px solid white
-         cursor pointer
-         -webkit-transition-duration 0.6s
-      
+         box-sizing border-box
+         -webkit-box-sizing border-box
+         -moz-box-sizing border-box
 
-      .buttonhover 
-         background-color transparent
-         color white
-      
-
-      input 
-         line-height 50px
-      
+      input
+         padding $form-screen-input-padding
 
       textarea 
          height 120px
-      
-   
+         padding $form-screen-textarea-padding
+
+      .button 
+         line-height 50px
+         //background-color white
+         //border-radius 5px
+         border-top 2px solid white
+         border-bottom 2px solid white
+         //color white
+         width 50%
+         margin auto
+         //border 1px solid white
+         cursor pointer

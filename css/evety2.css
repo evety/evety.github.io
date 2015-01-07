@@ -357,65 +357,42 @@ body {
 }
 .form-screen {
   background: url("/images/keyboard2.jpg") no-repeat;
-  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   text-align: center;
-  font-size: 25px;
   color: #fff;
-  font-family: 'DejaVu serif';
   width: 100%;
-  padding-bottom: 20px;
-}
-.form-screen .title {
-  font-family: 'Sansation', 'Tahoma';
-  font-size: 42px;
-  line-height: 120px;
-  font-weight: bold;
-  text-align: center;
-}
-.form-screen .subtitle {
-  font-family: 'DejaVu serif';
-  font-size: 25px;
-  font-style: italic;
-  text-align: center;
 }
 .form-screen form {
   width: 50%;
   margin: auto;
-  color: #000;
-  font-style: italic;
-  font-size: 20px;
+  padding: 0 0 20px 0;
 }
 .form-screen form input,
 .form-screen form textarea {
   width: 100%;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
+  color: #fff;
   background-color: rgba(255,255,255,0.3);
   border: none;
-  color: #fff;
-  padding: 0px 15px;
-  border-radius: 5px;
-}
-.form-screen form .button {
-  line-height: 50px;
-  background-color: #fff;
-  border-radius: 5px;
-  width: 50%;
-  margin: auto;
-  border: 1px solid #fff;
-  cursor: pointer;
-  -webkit-transition-duration: 0.6s;
-}
-.form-screen form .buttonhover {
-  background-color: transparent;
-  color: #fff;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 .form-screen form input {
-  line-height: 50px;
+  padding: 15px;
 }
 .form-screen form textarea {
   height: 120px;
+  padding: 15px;
+}
+.form-screen form .button {
+  line-height: 50px;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  width: 50%;
+  margin: auto;
+  cursor: pointer;
 }
