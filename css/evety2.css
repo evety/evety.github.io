@@ -153,10 +153,17 @@ body {
   text-align: center;
   overflow: hidden;
 }
-.offer-screen .content .column.center {
-  width: 33.4%;
-  border-left: 1px solid #d3d3d3;
-  border-right: 1px solid #d3d3d3;
+@media screen and (max-width: 750px) {
+  .offer-screen .content .column {
+    display: inline-block;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 750px) {
+  .offer-screen .content .column.center {
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+  }
 }
 .offer-screen .content .column .slider {
   width: 200%;

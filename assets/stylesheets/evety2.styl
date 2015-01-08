@@ -240,10 +240,15 @@ html, body
          text-align center
          overflow hidden
 
+         @media screen and (max-width: 750px)
+            display inline-block
+            width 100%
+
          &.center
-            width 33.4%
-            border-left 1px solid $html-lines-color
-            border-right 1px solid $html-lines-color
+            @media screen and (min-width: 750px)
+               border-left 1px solid $html-lines-color
+               border-right 1px solid $html-lines-color
+
 
          .slider
             width 200%
@@ -288,6 +293,7 @@ html, body
          .corner-up
             offer-screen-corner()
             border-up none
+
 
 // ============================== //
 //          Works screen          //
