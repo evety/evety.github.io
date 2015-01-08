@@ -3,6 +3,12 @@
 @import "button"
 
 // ============================= //
+//             Sizes             //
+// ============================= //
+$screen-size-small = 500px
+$screen-size-middle = 750px
+
+// ============================= //
 //       Background images       //
 // ============================= //
 $welcome-screen-background             = url('/images/keyboard_dark.jpg') top center no-repeat
@@ -240,12 +246,12 @@ html, body
          text-align center
          overflow hidden
 
-         @media screen and (max-width: 750px)
+         @media screen and (max-width: $screen-size-middle)
             display inline-block
             width 100%
 
          &.center
-            @media screen and (min-width: 750px)
+            @media screen and (min-width: $screen-size-middle)
                border-left 1px solid $html-lines-color
                border-right 1px solid $html-lines-color
 
@@ -272,13 +278,11 @@ html, body
                   text-align center
 
                .header
-                  font-main()
                   font-size 30px
                   line-height 70px
 
                .description
                   text-align justify
-                  font-main()
                   font-size 16px
                   line-height 22px
 
@@ -342,8 +346,13 @@ html, body
             background -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
             background -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
             background linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
-            //filter progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 )
+           // @css {
+           //    filter progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 )
+           // }
 
+// ============================== //
+//         Process screen         //
+// ============================== //
 .process-screen
    background-color $process-screen-background-color
 
@@ -375,9 +384,11 @@ html, body
 
          .image
             width $process-screen-image-size
+            position relative
 
             .frame
                position absolute
+               top 0
 
                display inline-block
 
@@ -397,15 +408,16 @@ html, body
             .popup
                background-color white
                height $process-screen-popup-height
-               margin (($process-screen-image-size / 2) - $process-screen-popup-corner-top - $popup-corner-height) 30px 0px 50px
+               margin (($process-screen-image-size / 2) - $process-screen-popup-corner-top - $popup-corner-height) 30px 0px 30px
                padding $process-screen-popup-padding
                border-bottom 1px solid $html-lines-color
 
                position relative
-               display table
 
-               //display table-cell
-               //vertical-align middle
+               .popup-inner
+                  display table
+                  width 100%
+                  height 100%
 
                .popup-content
                   display table-cell
@@ -413,7 +425,6 @@ html, body
                   text-align center
                   width 100%
                   height 100%
-                  font-main-italic()
 
                &:after
                   content ' '
@@ -442,17 +453,20 @@ html, body
             width 50%
             vertical-align top
             line-height $process-screen-image-size
-            font-main()
             font-family 'Sansation'
+
+            .name-content
+               padding 0px 25px
 
             &.left
                text-align right
-               padding-right 25px
 
             &.right
                text-align left
-               padding-left 25px
 
+// ============================== //
+//      Communication screen      //
+// ============================== //
 .communication-screen
    background-color $communication-screen-background-color
 
@@ -462,6 +476,7 @@ html, body
       display table
       width 100%
       table-layout fixed
+      text-align center
 
       padding $communication-screen-content-padding
 
@@ -469,6 +484,14 @@ html, body
          display table-cell
          text-align center
          overflow hidden
+
+         @media screen and (max-width: $screen-size-middle)
+            display inline-block
+            width 32%
+
+         @media screen and (max-width: $screen-size-small)
+            display inline-block
+            width 49%
 
          .thumbnail
             width $communication-screen-circle-size
@@ -505,6 +528,9 @@ html, body
          .value
             padding $communication-screen-value-padding
 
+// ============================= //
+//          Form screen          //
+// ============================= //
 .form-screen
    background $form-screen-background
 
@@ -521,6 +547,9 @@ html, body
       width 50%
       margin auto
       padding $form-screen-form-padding
+
+      @media screen and (max-width: $screen-size-middle)
+         width 90%
 
       input, textarea 
          width 100%
@@ -544,12 +573,11 @@ html, body
 
       .button 
          line-height 50px
-         //background-color white
-         //border-radius 5px
          border-top 2px solid white
          border-bottom 2px solid white
-         //color white
          width 50%
          margin auto
-         //border 1px solid white
          cursor pointer
+
+         @media screen and (max-width: $screen-size-middle)
+            width 100%
