@@ -171,38 +171,38 @@ body {
 .offer-screen .content .column .slider:hover {
   margin-left: -100%;
 }
-.offer1,
-.offer2 {
+.offer-screen .content .column .slider .offer1,
+.offer-screen .content .column .slider .offer2 {
   width: 50%;
   display: table-cell;
   padding: 30px;
 }
-.offer1 .image,
-.offer2 .image {
+.offer-screen .content .column .slider .offer1 .image,
+.offer-screen .content .column .slider .offer2 .image {
   text-align: center;
 }
-.offer1 .header,
-.offer2 .header {
+.offer-screen .content .column .slider .offer1 .header,
+.offer-screen .content .column .slider .offer2 .header {
   font-size: 30px;
   line-height: 70px;
 }
-.offer1 .description,
-.offer2 .description {
+.offer-screen .content .column .slider .offer1 .description,
+.offer-screen .content .column .slider .offer2 .description {
   text-align: justify;
   font-size: 16px;
   line-height: 22px;
 }
-.offer1 .description table,
-.offer2 .description table {
+.offer-screen .content .column .slider .offer1 .description table,
+.offer-screen .content .column .slider .offer2 .description table {
   width: 100%;
 }
-.offer1 .description table td,
-.offer2 .description table td {
+.offer-screen .content .column .slider .offer1 .description table td,
+.offer-screen .content .column .slider .offer2 .description table td {
   text-align: center;
   border-bottom: 1px solid #d3d3d3;
   line-height: 40px;
 }
-.corner-up {
+.offer-screen .content .column .corner-up {
   display: inline-block;
   width: 0;
   height: 0;
@@ -214,14 +214,18 @@ body {
 }
 .works-screen {
   height: 500px;
-  background: url("/images/screen26.png") center;
+  background: url("/images/snapshot6.png") center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: relative;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .works-screen .our-works {
   position: absolute;
+  top: 0;
   height: 500px;
   width: 100%;
   display: table;
@@ -229,14 +233,19 @@ body {
 .works-screen .our-works .center-cell {
   width: 100%;
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
   text-align: center;
 }
 .works-screen .our-works .center-cell .content {
   display: inline-block;
-  width: 50%;
+  width: 100%;
   height: 50%;
-  background-color: rgba(0,0,0,0.6);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.65)), color-stop(100%, rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
 }
 .process-screen {
   background-color: #f1f1f1;
