@@ -268,12 +268,23 @@ body {
   height: 100%;
   background-color: #d3d3d3;
 }
+@media screen and (max-width: 500px) {
+  .process-screen .content .vline {
+    display: none;
+  }
+}
 .process-screen .content .record {
   display: table;
   table-layout: fixed;
   padding-top: 0px;
   padding-bottom: 20px;
   width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .process-screen .content .record {
+    display: inline-block;
+    width: 100%;
+  }
 }
 .process-screen .content .record.first {
   padding-top: 30px;
@@ -286,6 +297,11 @@ body {
 .process-screen .content .record .image {
   width: 100px;
   position: relative;
+}
+@media screen and (max-width: 500px) {
+  .process-screen .content .record .image {
+    display: none;
+  }
 }
 .process-screen .content .record .image .frame {
   position: absolute;
@@ -301,6 +317,12 @@ body {
 }
 .process-screen .content .record .description {
   width: 50%;
+}
+@media screen and (max-width: 500px) {
+  .process-screen .content .record .description {
+    display: block;
+    width: 100%;
+  }
 }
 .process-screen .content .record .description .popup {
   background-color: #fff;
@@ -345,6 +367,11 @@ body {
   vertical-align: top;
   line-height: 100px;
   font-family: 'Sansation';
+}
+@media screen and (max-width: 500px) {
+  .process-screen .content .record .name {
+    display: none;
+  }
 }
 .process-screen .content .record .name .name-content {
   padding: 0px 25px;

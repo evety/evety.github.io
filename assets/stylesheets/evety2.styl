@@ -367,6 +367,9 @@ html, body
          height 100%
          background-color $html-lines-color
 
+         @media screen and (max-width: $screen-size-small)
+            display none
+
       .record
          display table
          table-layout fixed
@@ -375,6 +378,10 @@ html, body
          padding-bottom $process-screen-record-padding-bottom
 
          width 100%
+
+         @media screen and (max-width: $screen-size-small)
+            display inline-block
+            width 100%
 
          &.first
             padding-top $process-screen-first-record-padding
@@ -385,6 +392,9 @@ html, body
          .image
             width $process-screen-image-size
             position relative
+
+            @media screen and (max-width: $screen-size-small)
+               display none
 
             .frame
                position absolute
@@ -404,6 +414,10 @@ html, body
 
          .description
             width 50%
+
+            @media screen and (max-width: $screen-size-small)
+               display block
+               width 100%
 
             .popup
                background-color white
@@ -454,6 +468,9 @@ html, body
             vertical-align top
             line-height $process-screen-image-size
             font-family 'Sansation'
+
+            @media screen and (max-width: $screen-size-small)
+               display none
 
             .name-content
                padding 0px 25px
