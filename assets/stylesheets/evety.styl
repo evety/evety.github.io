@@ -1,5 +1,632 @@
+@import "fonts"
+@import "colors"
+@import "button"
+
+// ============================= //
+//             Sizes             //
+// ============================= //
+$screen-size-small = 500px
+$screen-size-middle = 750px
+
+// ============================= //
+//       Background images       //
+// ============================= //
+$welcome-screen-background             = url('/images/keyboard_dark.jpg') top center no-repeat
+$works-screen-background               = url('/images/snapshot6.png') center;
+$form-screen-background                = url('/images/keyboard2.jpg') no-repeat
+
+// ============================= //
+//             Sizes             //
+// ============================= //
+$welcome-screen-height                 = 800px
+
+$offer-screen-corner-height            = 54px
+$offer-screen-corner-width             = 235px
+
+$process-screen-image-size             = 100px
+$process-screen-popup-height           = 150px
+$process-screen-popup-corner-top       = 25px
+$process-screen-popup-padding          = 0px 10px
+$process-screen-vline-padding          = 30px
+$process-screen-first-record-padding   = 30px
+$process-screen-record-padding-top     = 0px
+$process-screen-record-padding-bottom  = 20px
+$process-screen-vline-width            = 1px
+
+$works-screen-height                   = 500px
+$works-screen-content-height           = 50%
+$works-screen-content-width            = 100%
+
+$communication-screen-content-padding  = 60px 0 80px 0
+$communication-screen-circle-size      = 150px
+$communication-screen-image-size       = 50px
+$communication-screen-key-padding      = 10px
+$communication-screen-value-padding    = 10px
+
+$form-screen-input-margin              = 0 0 20px 0
+$form-screen-input-padding             = 15px
+$form-screen-textarea-padding          = 15px
+$form-screen-form-padding              = 0 0 20px 0
+
+$popup-corner-width                    = 11px
+$popup-corner-height                   = 11px
+
+// ============================== //
+//             Colors             //
+// ============================== //
+$html-font-color                       = $gray
+$html-lines-color                      = $lgray
+
+$welcome-screen-text-color             = white
+
+$offer-screen-background-color         = white
+
+$process-screen-background-color       = #f1f1f1
+
+$works-screen-content-background-color = rgba(0, 0, 0, 0.6)
+$works-screen-text-color               = white
+
+$communication-screen-background-color = white
+$communication-screen-circle-color     = $html-lines-color
+$communication-screen-key-text-color   = #E27846
+
+$form-screen-text-color                = white
+$form-screen-input-text-color          = white
+$form-screen-input-background-color    = rgba(255, 255, 255, 0.3)
+
+$button-hover-color                    = $lblue
+
+// ============================= //
+//             Fonts             //
+// ============================= //
+offer-screen-menu-font()
+   font-family 'Sansation'
+   color $html-font-color
+   font-size 20px
+
+// ============================== //
+//            Elements            //
+// ============================== //
+
+offer-screen-corner()
+   display inline-block
+
+   width 0
+   height 0
+
+   border-style solid
+   border-width ($offer-screen-corner-height - 2px) ($offer-screen-corner-width/2) ($offer-screen-corner-height - 2px) ($offer-screen-corner-width/2)
+   border-color transparent $offer-screen-background-color
+
+   padding-bottom 2px
+
+// ============================== //
+//         Default styles         //
+// ============================== //
+
+html, body
+   color $html-font-color
+
+.title
+   font-family 'Sansation'
+   font-weight bold
+   font-size 42px
+   line-height 120px
+   text-align center
+
+.subtitle
+   font-family 'DejaVu serif'
+   font-style italic
+   font-size 25px
+   line-height 35px
+   text-align center
+
+// ============================== //
+//         Welcome screen         //
+// ============================== //
+
 .welcome-screen
-   width 100%
-   height 100%
    position absolute
+
+   z-index 1
+
    top 0
+   left 0
+
+   width 100%
+   height $welcome-screen-height
+   min-height $welcome-screen-height
+
+   text-align center
+
+   background $welcome-screen-background
+
+   -webkit-background-size cover
+   -moz-background-size cover
+   -o-background-size cover
+   background-size cover
+
+   .title
+      line-height 60px
+
+   .visible-area
+      height $welcome-screen-height - $offer-screen-corner-height
+      width 100%
+      display table
+
+   .content
+      display table-cell
+      vertical-align middle
+
+      width 100%
+
+      color $welcome-screen-text-color
+
+   .button
+      button($welcome-screen-text-color, $button-hover-color)
+      margin-top 1em
+      cursor pointer
+
+// ============================== //
+//          Offer screen          //
+// ============================== //
+
+.offer-screen
+   width 100%
+
+   // Добавим 2px для того, чтобы не появлялось черной линии под треугольником
+   margin-top $welcome-screen-height - $offer-screen-corner-height + 2px
+
+   background-color $offer-screen-background-color
+
+   .corner-line-top
+      position absolute
+      z-index 2
+
+      display inline-block
+
+      width 100%
+      height $offer-screen-corner-height
+
+      overflow hidden
+
+      table
+         width 100%
+
+      .corner-bottom
+         offer-screen-corner()
+         border-bottom none
+
+      .left, .right
+         background-color $offer-screen-background-color
+      .center
+         width $offer-screen-corner-width - 2px
+
+   .corner-line-bottom
+
+      .corner-top
+         offer-screen-corner()
+         border-top none
+
+      &.content
+         height $offer-screen-corner-height
+
+         .column
+            @media screen and (max-width: $screen-size-middle)
+               display none
+
+            background-color white
+
+            .corner-top
+               border-top none
+               vertical-align bottom
+
+            &.center
+               background none
+
+               @media screen and (max-width: $screen-size-middle)
+                  display inline-block
+
+
+   .menu
+      display inline-block
+
+      width 100%
+      margin-top $offer-screen-corner-height
+
+      text-align center
+
+      ul
+         display inline-block
+
+         padding 50px 0px
+
+         li
+            display inline-block
+            float left
+
+         a
+            offer-screen-menu-font()
+            text-decoration none
+            padding 0px 20px
+            border-right 1px dashed $html-lines-color
+
+            &.last
+               border-right none
+
+   .title
+      border-top 1px solid $html-lines-color
+      border-bottom 1px solid $html-lines-color
+      line-height 118px
+
+   .content
+      display table
+      table-layout fixed
+      width 100%
+      height 100%
+      margin 0
+      cursor pointer
+
+      .column
+         display table-cell
+         width 33.3%
+         height 100%
+         vertical-align top
+         text-align center
+         overflow hidden
+
+         @media screen and (max-width: $screen-size-middle)
+            display inline-block
+            height initial
+            width 100%
+
+         &.center
+            @media screen and (min-width: $screen-size-middle)
+               border-left 1px solid $html-lines-color
+               border-right 1px solid $html-lines-color
+
+
+         .slider
+            width 200%
+            height 100%
+            display table
+            table-layout fixed
+            -webkit-transition-duration 1s
+            -moz-transition-duration 1s
+            -ms-transition-duration 1s
+            -o-transition-duration 1s
+            transition-duration 1s
+
+            &:hover
+               margin-left -100%
+
+            .offer1, .offer2
+               width 50%
+               display table-cell
+               padding 30px
+
+               .image
+                  text-align center
+
+               .header
+                  font-size 30px
+                  line-height 70px
+
+               .description
+                  text-align justify
+                  font-size 16px
+                  line-height 22px
+
+                  table
+                     width 100%
+
+                     td
+                        text-align center
+                        border-bottom 1px solid $html-lines-color
+                        line-height 40px
+
+         .corner-up
+            offer-screen-corner()
+            border-up none
+
+
+// ============================== //
+//          Works screen          //
+// ============================== //
+
+.works-screen
+   height $works-screen-height
+
+   background $works-screen-background
+
+   -webkit-background-size cover
+   -moz-background-size cover
+   -o-background-size cover
+   background-size cover
+
+   position relative
+
+   color $works-screen-text-color
+
+   //box-shadow 0 0 10px rgba(0, 0, 0, 0.5)
+
+   .our-works
+      position absolute
+      top 0
+
+      height $works-screen-height
+      width 100%
+
+      display table
+
+      .center-cell
+         width 100%
+         display table-cell
+         vertical-align top
+         text-align center
+
+         .content
+            display inline-block
+            padding-top $offer-screen-corner-height
+
+            width $works-screen-content-width
+            height $works-screen-content-height
+
+            background -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%)
+            background -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)))
+            background -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+            background -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+            background -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+            background linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+           // @css {
+           //    filter progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 )
+           // }
+
+// ============================== //
+//         Process screen         //
+// ============================== //
+.process-screen
+   background-color $process-screen-background-color
+
+   .content
+      position relative
+      margin-top $process-screen-vline-padding
+
+      .vline
+         position absolute
+         width $process-screen-vline-width
+         left 50%
+         height 100%
+         background-color $html-lines-color
+
+         @media screen and (max-width: $screen-size-small)
+            display none
+
+      .record
+         display table
+         table-layout fixed
+
+         padding-top $process-screen-record-padding-top
+         padding-bottom $process-screen-record-padding-bottom
+
+         width 100%
+
+         @media screen and (max-width: $screen-size-small)
+            display inline-block
+            width 100%
+
+         &.first
+            padding-top $process-screen-first-record-padding
+
+         .image, .description, .name
+            display table-cell
+
+         .image
+            width $process-screen-image-size
+            position relative
+
+            @media screen and (max-width: $screen-size-small)
+               display none
+
+            .frame
+               position absolute
+               top 0
+
+               display inline-block
+
+               width $process-screen-image-size
+               height $process-screen-image-size
+
+               border-radius 50%
+               -webkit-border-radius 50%
+               -moz-border-radius 50%
+
+               background-repeat no-repeat
+               background-size cover
+
+         .description
+            width 50%
+
+            @media screen and (max-width: $screen-size-small)
+               display block
+               width 100%
+
+            .popup
+               background-color white
+               height $process-screen-popup-height
+               margin (($process-screen-image-size / 2) - $process-screen-popup-corner-top - $popup-corner-height) 30px 0px 30px
+               padding $process-screen-popup-padding
+               border-bottom 1px solid $html-lines-color
+
+               position relative
+
+               .popup-inner
+                  display table
+                  width 100%
+                  height 100%
+
+               .popup-content
+                  display table-cell
+                  vertical-align middle
+                  text-align center
+                  width 100%
+                  height 100%
+
+               &:after
+                  content ' '
+
+                  position absolute
+                  display inline-block
+                  top $process-screen-popup-corner-top
+
+                  width 0
+                  height 0
+
+                  border-style solid
+                  border-color transparent white
+
+               &.left
+                  &:after
+                     border-width $popup-corner-height 0 $popup-corner-height ($popup-corner-width + 1px)
+                     right (- $popup-corner-width)
+
+               &.right
+                  &:after
+                     border-width $popup-corner-height ($popup-corner-width + 1px) $popup-corner-height 0
+                     left (- $popup-corner-width)
+
+         .name
+            width 50%
+            vertical-align top
+            line-height $process-screen-image-size
+            font-family 'Sansation'
+
+            @media screen and (max-width: $screen-size-small)
+               display none
+
+            .name-content
+               padding 0px 25px
+
+            &.left
+               text-align right
+
+            &.right
+               text-align left
+
+// ============================== //
+//      Communication screen      //
+// ============================== //
+.communication-screen
+   background-color $communication-screen-background-color
+
+   box-shadow 0 0 10px rgba(0,0,0,0.5)
+
+   .content
+      display table
+      width 100%
+      table-layout fixed
+      text-align center
+
+      padding $communication-screen-content-padding
+
+      .record
+         display table-cell
+         text-align center
+         overflow hidden
+
+         @media screen and (max-width: $screen-size-middle)
+            display inline-block
+            width 32%
+
+         @media screen and (max-width: $screen-size-small)
+            display inline-block
+            width 49%
+
+         .thumbnail
+            width $communication-screen-circle-size
+            height $communication-screen-circle-size
+            display inline-block
+
+
+            .circle
+               width $communication-screen-circle-size
+               height $communication-screen-circle-size
+               display table-cell
+
+               border-radius 50%
+               -webkit-border-radius 50%
+               -moz-border-radius 50%
+
+               vertical-align middle
+               text-align center
+
+               background-color $communication-screen-circle-color
+
+               .image
+                  width $communication-screen-image-size
+                  height $communication-screen-image-size
+
+                  display inline-block
+
+                  background-repeat no-repeat
+                  background-size contain
+                  background-position center
+         .key
+            color $communication-screen-key-text-color
+            padding $communication-screen-key-padding
+         .value
+            padding $communication-screen-value-padding
+
+// ============================= //
+//          Form screen          //
+// ============================= //
+.form-screen
+   background $form-screen-background
+
+   -webkit-background-size cover
+   -moz-background-size cover
+   -o-background-size cover
+   background-size cover
+
+   text-align center
+   color $form-screen-text-color
+   width 100%
+
+   form 
+      width 50%
+      margin auto
+      padding $form-screen-form-padding
+
+      @media screen and (max-width: $screen-size-middle)
+         width 90%
+
+      input, textarea 
+         width 100%
+
+         margin $form-screen-input-margin
+
+         color $form-screen-input-text-color
+         background-color $form-screen-input-background-color
+         border none
+
+         box-sizing border-box
+         -webkit-box-sizing border-box
+         -moz-box-sizing border-box
+
+      input
+         padding $form-screen-input-padding
+
+      textarea 
+         height 120px
+         padding $form-screen-textarea-padding
+
+      .button 
+         line-height 50px
+         border-top 2px solid white
+         border-bottom 2px solid white
+         width 50%
+         margin auto
+         cursor pointer
+
+         @media screen and (max-width: $screen-size-middle)
+            width 100%
