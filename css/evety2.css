@@ -110,6 +110,39 @@ body {
 .offer-screen .corner-line-top .center {
   width: 233px;
 }
+.offer-screen .corner-line-bottom .corner-top {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 52px 117.5px 52px 117.5px;
+  border-color: transparent #fff;
+  padding-bottom: 2px;
+  border-top: none;
+}
+.offer-screen .corner-line-bottom.content {
+  height: 54px;
+}
+.offer-screen .corner-line-bottom.content .column {
+  background-color: #fff;
+}
+@media screen and (max-width: 750px) {
+  .offer-screen .corner-line-bottom.content .column {
+    display: none;
+  }
+}
+.offer-screen .corner-line-bottom.content .column .corner-top {
+  border-top: none;
+  vertical-align: bottom;
+}
+.offer-screen .corner-line-bottom.content .column.center {
+  background: none;
+}
+@media screen and (max-width: 750px) {
+  .offer-screen .corner-line-bottom.content .column.center {
+    display: inline-block;
+  }
+}
 .offer-screen .menu {
   display: inline-block;
   width: 100%;
@@ -144,18 +177,22 @@ body {
   display: table;
   table-layout: fixed;
   width: 100%;
+  height: 100%;
   margin: 0;
   cursor: pointer;
 }
 .offer-screen .content .column {
   display: table-cell;
   width: 33.3%;
+  height: 100%;
+  vertical-align: top;
   text-align: center;
   overflow: hidden;
 }
 @media screen and (max-width: 750px) {
   .offer-screen .content .column {
     display: inline-block;
+    height: initial;
     width: 100%;
   }
 }
@@ -167,6 +204,7 @@ body {
 }
 .offer-screen .content .column .slider {
   width: 200%;
+  height: 100%;
   display: table;
   table-layout: fixed;
   -webkit-transition-duration: 1s;
@@ -228,7 +266,6 @@ body {
   background-size: cover;
   position: relative;
   color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .works-screen .our-works {
   position: absolute;
@@ -245,6 +282,7 @@ body {
 }
 .works-screen .our-works .center-cell .content {
   display: inline-block;
+  padding-top: 54px;
   width: 100%;
   height: 50%;
   background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);

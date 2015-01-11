@@ -202,6 +202,32 @@ html, body
       .center
          width $offer-screen-corner-width - 2px
 
+   .corner-line-bottom
+
+      .corner-top
+         offer-screen-corner()
+         border-top none
+
+      &.content
+         height $offer-screen-corner-height
+
+         .column
+            @media screen and (max-width: $screen-size-middle)
+               display none
+
+            background-color white
+
+            .corner-top
+               border-top none
+               vertical-align bottom
+
+            &.center
+               background none
+
+               @media screen and (max-width: $screen-size-middle)
+                  display inline-block
+
+
    .menu
       display inline-block
 
@@ -251,6 +277,7 @@ html, body
 
          @media screen and (max-width: $screen-size-middle)
             display inline-block
+            height initial
             width 100%
 
          &.center
@@ -321,7 +348,7 @@ html, body
 
    color $works-screen-text-color
 
-   box-shadow 0 0 10px rgba(0, 0, 0, 0.5)
+   //box-shadow 0 0 10px rgba(0, 0, 0, 0.5)
 
    .our-works
       position absolute
@@ -340,6 +367,7 @@ html, body
 
          .content
             display inline-block
+            padding-top $offer-screen-corner-height
 
             width $works-screen-content-width
             height $works-screen-content-height
