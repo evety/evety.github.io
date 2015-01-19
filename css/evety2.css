@@ -314,6 +314,8 @@ body {
   -moz-border-radius: 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
+  /*background: white;*/
 }
 .process-screen .content .record .description {
   width: 50%;
