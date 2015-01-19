@@ -314,11 +314,12 @@ body {
   -moz-border-radius: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
   /*background: white;*/
+  box-shadow: 5px 5px 8px #d3d3d3;
 }
 .process-screen .content .record .description {
   width: 50%;
+  /*padding-left: 10px;*/
 }
 @media screen and (max-width: 500px) {
   .process-screen .content .record .description {
@@ -427,6 +428,26 @@ body {
   vertical-align: middle;
   text-align: center;
   background-color: #d3d3d3;
+}
+#circle_mail {
+    background: url(/images/brown-dress-183906_640.jpg);
+    background-size: cover;
+}
+#circle_skype {
+    background: url(/images/mushrooms-454172_640.jpg);
+    background-size: cover;
+}
+#circle_phone {
+    background: url(/images/styggkarret-433688_640.jpg);
+    background-size: cover;
+}
+#circle_twitter {
+    background: url(/images/spring-276014_640.jpg);
+    background-size: cover;
+}
+#circle_vk {
+    background: url(/images/forest-56930_640.jpg);
+    background-size: cover;
 }
 .communication-screen .content .record .thumbnail .circle .image {
   width: 50px;
