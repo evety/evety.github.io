@@ -23,7 +23,7 @@ $welcome-screen-height                 = 800px
 $offer-screen-corner-height            = 54px
 $offer-screen-corner-width             = 235px
 
-$process-screen-image-size             = 100px
+$process-screen-image-size             = 125px
 $process-screen-popup-height           = 150px
 $process-screen-popup-corner-top       = 25px
 $process-screen-popup-padding          = 0px 10px
@@ -245,6 +245,8 @@ html, body
          width 33.3%
          text-align center
          overflow hidden
+         padding: 30px
+         vertical-align: top
 
          @media screen and (max-width: $screen-size-middle)
             display inline-block
@@ -256,43 +258,25 @@ html, body
                border-right 1px solid $html-lines-color
 
 
-         .slider
-            width 200%
-            display table
-            table-layout fixed
-            -webkit-transition-duration 1s
-            -moz-transition-duration 1s
-            -ms-transition-duration 1s
-            -o-transition-duration 1s
-            transition-duration 1s
+         .image
+            text-align center
 
-            &:hover
-               margin-left -100%
+         .header
+            font-size 30px
+            line-height 70px
 
-            .offer1, .offer2
-               width 50%
-               display table-cell
-               padding 30px
+         .description
+            text-align justify
+            font-size 16px
+            line-height 22px
 
-               .image
+            table
+               width 100%
+
+               td
                   text-align center
-
-               .header
-                  font-size 30px
-                  line-height 70px
-
-               .description
-                  text-align justify
-                  font-size 16px
-                  line-height 22px
-
-                  table
-                     width 100%
-
-                     td
-                        text-align center
-                        border-bottom 1px solid $html-lines-color
-                        line-height 40px
+                  border-bottom 1px solid $html-lines-color
+                  line-height 40px
 
          .corner-up
             offer-screen-corner()
