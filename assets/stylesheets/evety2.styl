@@ -24,13 +24,13 @@ $offer-screen-corner-height            = 54px
 $offer-screen-corner-width             = 235px
 
 $process-screen-image-size             = 125px
-$process-screen-popup-height           = 150px
-$process-screen-popup-corner-top       = 25px
-$process-screen-popup-padding          = 0px 10px
+$process-screen-popup-height           = 125px
+$process-screen-popup-corner-top       = 51.5px
+$process-screen-popup-padding          = 10px
 $process-screen-vline-padding          = 30px
 $process-screen-first-record-padding   = 30px
 $process-screen-record-padding-top     = 0px
-$process-screen-record-padding-bottom  = 20px
+$process-screen-record-padding-bottom  = 50px
 $process-screen-vline-width            = 1px
 
 $works-screen-height                   = 500px
@@ -250,6 +250,9 @@ html, body
 
          @media screen and (max-width: $screen-size-middle)
             display inline-block
+            box-sizing border-box
+            -webkit-box-sizing border-box
+            -moz-box-sizing border-box
             width 100%
 
          &.center
@@ -405,24 +408,31 @@ html, body
 
             .popup
                background-color white
-               height $process-screen-popup-height
+               min-height $process-screen-popup-height
                margin (($process-screen-image-size / 2) - $process-screen-popup-corner-top - $popup-corner-height) 30px 0px 30px
-               padding $process-screen-popup-padding
                border-bottom 1px solid $html-lines-color
 
                position relative
 
                .popup-inner
                   display table
+                  table-layout fixed
                   width 100%
-                  height 100%
 
                .popup-content
                   display table-cell
                   vertical-align middle
                   text-align center
                   width 100%
-                  height 100%
+                  height $process-screen-popup-height
+                  padding $process-screen-popup-padding
+
+                  text-overflow: ellipsis
+                  overflow hidden
+
+                  box-sizing border-box
+                  -webkit-box-sizing border-box
+                  -moz-box-sizing border-box
 
                &:after
                   content ' '
@@ -458,6 +468,10 @@ html, body
 
             .name-content
                padding 0px 25px
+
+               overflow hidden
+               white-space nowrap
+               text-overflow ellipsis
 
             &.left
                text-align right
