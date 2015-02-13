@@ -42,7 +42,7 @@ body {
   height: 800px;
   min-height: 800px;
   text-align: center;
-  background: url("/images/keyboard_dark.jpg") top center no-repeat;
+  background: url("/images/ladybug-250425_1920.jpg") center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -432,7 +432,7 @@ body {
   padding: 10px;
 }
 .form-screen {
-  background: url("/images/keyboard2.jpg") no-repeat;
+  background: url("/images/spring-276014_1280.jpg") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
