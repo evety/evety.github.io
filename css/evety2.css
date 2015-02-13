@@ -152,10 +152,15 @@ body {
   width: 33.3%;
   text-align: center;
   overflow: hidden;
+  padding: 30px;
+  vertical-align: top;
 }
 @media screen and (max-width: 750px) {
   .offer-screen .content .column {
     display: inline-block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 100%;
   }
 }
@@ -165,46 +170,22 @@ body {
     border-right: 1px solid #d3d3d3;
   }
 }
-.offer-screen .content .column .slider {
-  width: 200%;
-  display: table;
-  table-layout: fixed;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-}
-.offer-screen .content .column .slider:hover {
-  margin-left: -100%;
-}
-.offer-screen .content .column .slider .offer1,
-.offer-screen .content .column .slider .offer2 {
-  width: 50%;
-  display: table-cell;
-  padding: 30px;
-}
-.offer-screen .content .column .slider .offer1 .image,
-.offer-screen .content .column .slider .offer2 .image {
+.offer-screen .content .column .image {
   text-align: center;
 }
-.offer-screen .content .column .slider .offer1 .header,
-.offer-screen .content .column .slider .offer2 .header {
+.offer-screen .content .column .header {
   font-size: 30px;
   line-height: 70px;
 }
-.offer-screen .content .column .slider .offer1 .description,
-.offer-screen .content .column .slider .offer2 .description {
+.offer-screen .content .column .description {
   text-align: justify;
   font-size: 16px;
   line-height: 22px;
 }
-.offer-screen .content .column .slider .offer1 .description table,
-.offer-screen .content .column .slider .offer2 .description table {
+.offer-screen .content .column .description table {
   width: 100%;
 }
-.offer-screen .content .column .slider .offer1 .description table td,
-.offer-screen .content .column .slider .offer2 .description table td {
+.offer-screen .content .column .description table td {
   text-align: center;
   border-bottom: 1px solid #d3d3d3;
   line-height: 40px;
@@ -277,7 +258,7 @@ body {
   display: table;
   table-layout: fixed;
   padding-top: 0px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   width: 100%;
 }
 @media screen and (max-width: 500px) {
@@ -295,7 +276,7 @@ body {
   display: table-cell;
 }
 .process-screen .content .record .image {
-  width: 100px;
+  width: 125px;
   position: relative;
 }
 @media screen and (max-width: 500px) {
@@ -307,19 +288,16 @@ body {
   position: absolute;
   top: 0;
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  /*background: white;*/
-  box-shadow: 5px 5px 8px #d3d3d3;
 }
 .process-screen .content .record .description {
   width: 50%;
-  /*padding-left: 10px;*/
 }
 @media screen and (max-width: 500px) {
   .process-screen .content .record .description {
@@ -329,29 +307,34 @@ body {
 }
 .process-screen .content .record .description .popup {
   background-color: #fff;
-  height: 150px;
-  margin: 14px 30px 0px 30px;
-  padding: 0px 10px;
+  min-height: 125px;
+  margin: 0px 30px 0px 30px;
   border-bottom: 1px solid #d3d3d3;
   position: relative;
 }
 .process-screen .content .record .description .popup .popup-inner {
   display: table;
+  table-layout: fixed;
   width: 100%;
-  height: 100%;
 }
 .process-screen .content .record .description .popup .popup-content {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: 125px;
+  padding: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 .process-screen .content .record .description .popup:after {
   content: ' ';
   position: absolute;
   display: inline-block;
-  top: 25px;
+  top: 51.5px;
   width: 0;
   height: 0;
   border-style: solid;
@@ -368,7 +351,7 @@ body {
 .process-screen .content .record .name {
   width: 50%;
   vertical-align: top;
-  line-height: 100px;
+  line-height: 125px;
   font-family: 'Sansation';
 }
 @media screen and (max-width: 500px) {
@@ -378,6 +361,9 @@ body {
 }
 .process-screen .content .record .name .name-content {
   padding: 0px 25px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .process-screen .content .record .name.left {
   text-align: right;
@@ -422,15 +408,13 @@ body {
   width: 150px;
   height: 150px;
   display: table-cell;
+  background-size: cover;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   vertical-align: middle;
   text-align: center;
   background-color: #d3d3d3;
-}
-.circle {
-  background-size: cover;
 }
 .communication-screen .content .record .thumbnail .circle .image {
   width: 50px;
